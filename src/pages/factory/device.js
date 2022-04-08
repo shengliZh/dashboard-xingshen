@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Button, Card, Image, Modal } from "antd";
-import { ArrowRightOutlined, CloseOutlined } from "@ant-design/icons";
+import {
+  ArrowRightOutlined,
+  CloseOutlined,
+  MoreOutlined,
+} from "@ant-design/icons";
 import { devices } from "../../constant/constant";
 import Company from "../about/company";
 import _img from "../image/img";
@@ -82,28 +86,36 @@ function Device() {
                   />
                   <div
                     style={{
-                      fontSize: 20,
-                      fontWeight: "bold",
+                      fontSize: 16,
+                      fontWeight: "200",
                     }}
                   >
                     {p.name}
                   </div>
-                  <Button
-                    type="primary"
-                    shape="round"
-                    style={{ margin: 20 }}
-                    onClick={() => {
-                      setInfo({
-                        name: p.name,
-                        desc: p.desc,
-                        src: p.src,
-                        param: p.param,
-                      });
-                      setVisible(true);
+                  <div
+                    style={{
+                      display: "flex",
+                      marginBottom: 10,
                     }}
                   >
-                    了解详情 <ArrowRightOutlined />
-                  </Button>
+                    <div className="title" style={{ flex: "0.98" }} />
+                    <div
+                      className="more_style"
+                      onClick={() => {
+                        setInfo({
+                          name: p.name,
+                          desc: p.desc,
+                          src: p.src,
+                          param: p.param,
+                        });
+                        setVisible(true);
+                      }}
+                      style={{ margin: 10 }}
+                    >
+                      <MoreOutlined className="more_icon" />
+                      MORE
+                    </div>
+                  </div>
                 </div>
               </Card.Grid>
             );

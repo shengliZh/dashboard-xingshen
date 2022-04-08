@@ -56,6 +56,14 @@ const rencaizhaopin = require("../../img/rencaizhaopin.jpeg");
 const shebeijieshao = require("../../img/shebeijieshao.png");
 const yewu = require("../../img/yewu.jpeg");
 
+//产品
+const product_1 = require("../../img/product_1.jpg");
+const product_2 = require("../../img/product_2.jpg");
+const product_3 = require("../../img/product_3.jpg");
+const product_4 = require("../../img/product_4.jpg");
+const product_5 = require("../../img/product_5.jpg");
+const product_6 = require("../../img/product_6.jpg");
+
 export default {
   yinshuaji,
   yinshuajicanshu,
@@ -109,4 +117,10 @@ export default {
   rencaizhaopin,
   shebeijieshao,
   yewu,
+  product_1,
+  product_2,
+  product_3,
+  product_4,
+  product_5,
+  product_6,
 };
