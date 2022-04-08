@@ -11,57 +11,68 @@ const { Step } = Steps;
 function Contact() {
   const [showPop, setShowPop] = useState(true);
   return (
-    <div style={{ marginLeft: 50 }}>
-      <div
-        style={{
-          fontSize: 22,
-          paddingTop: 20,
-          color: "#1e90ff",
-        }}
-      >
-        联系我们
+    <div style={{ marginLeft: 50, width: "80%" }}>
+      <div style={{ backgroundColor: "#fff" }}>
+        <div
+          style={{
+            fontSize: 22,
+            paddingTop: 20,
+            color: "#1e90ff",
+            textAlign: "left",
+            marginLeft: 20,
+          }}
+        >
+          联系我们
+        </div>
+        <div
+          style={{
+            fontSize: 18,
+            textAlign: "right",
+            color: "#1e90ff",
+            marginRight: 20,
+          }}
+        >
+          Contact Us
+        </div>
+        <div style={{ backgroundColor: "#1e90ff", height: 1 }} />
+        <div
+          style={{
+            marginTop: 30,
+            marginBottom: 20,
+            textAlign: "left",
+            marginLeft: 20,
+          }}
+        >
+          安徽兴申科技有限公司
+        </div>
+        <Steps direction="vertical" style={{ marginLeft: 20 }}>
+          <Step
+            icon={<HomeOutlined />}
+            title="地址"
+            status={"finish"}
+            description="安徽省马鞍山市郑浦港新区和州大道蒲建标准化厂房1号楼"
+          />
+          <Step
+            title="电话"
+            description="0555-2963088"
+            status={"finish"}
+            icon={<PhoneOutlined />}
+          />
+          <Step
+            title="邮箱"
+            description="guangrongchen@ttongjd.cn"
+            status={"finish"}
+            icon={<MailOutlined />}
+          />
+          <Step
+            title="手机"
+            description="18069673763"
+            status={"finish"}
+            icon={<PhoneOutlined />}
+          />
+        </Steps>
       </div>
-      <div
-        style={{
-          width: "50%",
-          fontSize: 18,
-          textAlign: "right",
-          color: "#1e90ff",
-        }}
-      >
-        Contact Us
-      </div>
-      <div style={{ width: "50%", backgroundColor: "#1e90ff", height: 1 }} />
-      <div style={{ marginTop: 30, marginBottom: 20 }}>
-        安徽兴申科技有限公司
-      </div>
-      <Steps direction="vertical">
-        <Step
-          icon={<HomeOutlined />}
-          title="地址"
-          status={"finish"}
-          description="安徽省马鞍山市郑浦港新区和州大道蒲建标准化厂房1号楼"
-        />
-        <Step
-          title="电话"
-          description="0555-2963088"
-          status={"finish"}
-          icon={<PhoneOutlined />}
-        />
-        <Step
-          title="邮箱"
-          description="guangrongchen@ttongjd.cn"
-          status={"finish"}
-          icon={<MailOutlined />}
-        />
-        <Step
-          title="手机"
-          description="18069673763"
-          status={"finish"}
-          icon={<PhoneOutlined />}
-        />
-      </Steps>
-      <div style={{ width: "70%", height: "300px", marginTop: 20 }}>
+      <div style={{ marginTop: 20 }}>
         <Map
           center={new window.BMapGL.Point(118.352155, 31.624036)}
           zoom={12}

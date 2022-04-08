@@ -71,7 +71,13 @@ function App() {
         </div>
         <div style={{ width: "100%", height: 0.5, backgroundColor: "gray" }} />
       </Header>
-      <Content style={{ backgroundColor: "#f0f0f0", marginTop: 64 }}>
+      <Content
+        style={{
+          backgroundColor: "#f0f0f0",
+          marginTop: 64,
+          width: window.innerWidth,
+        }}
+      >
         <div
           style={{
             background: "#f0f0f0",

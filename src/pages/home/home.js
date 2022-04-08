@@ -1,22 +1,29 @@
 import React from "react";
 import Company from "../about/company";
-import Production from "../production/production";
-import { Button } from "antd";
-import { ArrowRightOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import Chanxian from "../factory/chanxian";
 import Introduction from "../about/introduction_home";
 import Slider from "../tools/slider/slider";
 import { devices } from "../../constant/constant";
 import { MoreOutlined } from "@ant-design/icons";
+import _img from "../image/img";
 import "./home.css";
+import Factory_env from "./factory_env";
+
+const factory_env = [
+  _img.SMT_chejian,
+  _img.SMT_chejian_2,
+  _img.SMT_chejian_3,
+  _img.SMT_chejian_4,
+  _img.chanxian,
+  _img.chanxianzijian,
+];
 
 function Home() {
   const navigate = useNavigate();
   return (
     <div style={{ textAlign: "center" }}>
-      {/*<Company />*/}
-      {/*<div style={{ height: 30 }} />*/}
+      <Company img={[_img.about_us, _img.yewu]} />
+      <div style={{ height: 30 }} />
       <div style={{ backgroundColor: "#f0f0f0" }}>
         <div
           style={{
@@ -56,18 +63,39 @@ function Home() {
         </div>
       </div>
       <div style={{ height: 30 }} />
-      <Production title={"产品"} />
-      <Button
-        type="primary"
-        shape="round"
-        style={{ marginTop: 30 }}
-        onClick={() => {
-          navigate("/production");
-        }}
-      >
-        查看更多 <ArrowRightOutlined />
-      </Button>
-      <div style={{ height: 30 }} />
+      <div style={{ display: "flex" }}>
+        <div style={{ flex: "0.1" }} />
+        <div
+          style={{
+            flex: "0.8",
+            border: "2px solid #f0f0f0",
+            width: 200,
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#fafafa",
+              display: "flex",
+              marginBottom: 10,
+            }}
+          >
+            <div className="title" style={{ flex: "0.98" }}>
+              工厂环境
+            </div>
+            <div
+              className="more_style"
+              onClick={() => {
+                navigate("/factory/env");
+              }}
+            >
+              <MoreOutlined className="more_icon" />
+              MORE
+            </div>
+          </div>
+          <Factory_env img={factory_env} />
+        </div>
+      </div>
+      <div style={{ height: "100px" }} />
       <div style={{ display: "flex" }}>
         <div style={{ flex: "0.1" }} />
         <div

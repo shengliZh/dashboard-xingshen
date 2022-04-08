@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Card, Image, Modal } from "antd";
 import { ArrowRightOutlined, CloseOutlined } from "@ant-design/icons";
 import { devices } from "../../constant/constant";
+import Company from "../about/company";
+import _img from "../image/img";
 
 const gridStyle = {
   width: "33%",
@@ -61,6 +63,8 @@ function Device() {
           </div>
         </div>
       </Modal>
+      <Company img={[_img.shebeijieshao]} />
+      <div style={{ height: 30 }} />
       <div style={{ display: "flex", marginTop: 20 }}>
         <div style={{ width: "10%" }} />
         <Card

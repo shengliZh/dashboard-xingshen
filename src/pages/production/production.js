@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Card, Image } from "antd";
+import Company from "../about/company";
+import _img from "../image/img";
 
 const product_1 = require("../../img/product_1.jpg");
 const product_2 = require("../../img/product_2.jpg");
@@ -17,6 +19,8 @@ function Production(props) {
   const [visible, setVisible] = useState(false);
   return (
     <div>
+      <Company img={[_img.product]} />
+      <div style={{ height: 30 }} />
       <Card title={props.title ?? "产品演示"} style={{ marginTop: 30 }}>
         <Card.Grid style={gridStyle}>
           <Image

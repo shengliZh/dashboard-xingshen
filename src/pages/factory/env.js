@@ -1,10 +1,13 @@
 import React from "react";
 import { Space, Image } from "antd";
 import _img from "../image/img";
+import Company from "../about/company";
 
 function Env() {
   return (
     <div style={{ marginTop: 30 }}>
+      <Company img={[_img.chanpinanli]} />
+      <div style={{ height: 30 }} />
       <strong style={{ fontSize: 24 }}>工厂环境</strong>
       <div style={{ display: "flex" }}>
         <div style={{ width: "10%" }} />

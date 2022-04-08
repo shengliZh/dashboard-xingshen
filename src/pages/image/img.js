@@ -44,6 +44,17 @@ const SMT_chejian_4 = require("../../img/SMT_chejian_4.jpg");
 //产线
 const chanxian = require("../../img/chanxian.jpg");
 const chanxianzijian = require("../../img/chanxianzijian.jpg");
+//公司
+const shouye = require("../../img/home_page.jpeg");
+const zaixianliulan = require("../../img/zaixianliuyan.jpeg");
+const about_us = require("../../img/about_us.jpeg");
+const chanpinanli = require("../../img/case_demo.jpeg");
+const contact_us = require("../../img/contact_us.jpeg");
+const new_center = require("../../img/new_center.jpeg");
+const product = require("../../img/product.jpeg");
+const rencaizhaopin = require("../../img/rencaizhaopin.jpeg");
+const shebeijieshao = require("../../img/shebeijieshao.png");
+const yewu = require("../../img/yewu.jpeg");
 
 export default {
   yinshuaji,
@@ -88,4 +99,14 @@ export default {
   SMT_chejian_4,
   chanxian,
   chanxianzijian,
+  shouye,
+  zaixianliulan,
+  about_us,
+  chanpinanli,
+  contact_us,
+  new_center,
+  product,
+  rencaizhaopin,
+  shebeijieshao,
+  yewu,
 };

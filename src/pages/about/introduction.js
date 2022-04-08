@@ -1,48 +1,58 @@
 import React, { useState } from "react";
-import { Carousel, Image } from "antd";
-const office = require("../../img/office.jpg");
-const office_corner = require("../../img/office_corner.jpg");
-const office_bar = require("../../img/office_fore_bar.jpg");
-const qiantai = require("../../img/qiantai.jpg");
-const contentStyle = {
-  height: "400px",
-  color: "#fff",
-  lineHeight: "400px",
-  textAlign: "center",
-  background: "#364d79",
-};
+import { Image } from "antd";
+import _img from "../image/img";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const intrdduction = [qiantai, office, office_bar, office_corner];
+const introduction = [
+  _img.qiantai,
+  _img.office,
+  _img.office_bar,
+  _img.office_corner,
+];
 
 function Introduction() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    arrows: false,
+  };
   const [visible, setVisible] = useState(false);
   return (
-    <div style={{ display: "flex" }}>
-      <Carousel
-        autoplay
-        autoplaySpeed={3000}
-        style={{ height: 400, width: 400 }}
-      >
-        {intrdduction.map((p) => {
+    <div
+      style={{
+        display: "flex",
+        width: "80%",
+        backgroundColor: "#fff",
+        marginLeft: 50,
+      }}
+    >
+      <Slider {...settings} style={{ width: 400 }}>
+        {introduction.map((p) => {
           return (
             <div>
-              <h3 style={contentStyle}>
-                <Image
-                  style={{ height: 400, width: 400 }}
-                  src={p}
-                  preview={visible}
-                  onClick={() => setVisible(true)}
-                />
-              </h3>
+              <Image
+                style={{ height: 400 }}
+                src={p}
+                preview={visible}
+                onClick={() => setVisible(true)}
+              />
             </div>
           );
         })}
-      </Carousel>
+      </Slider>
       <div style={{ display: "none" }}>
         <Image.PreviewGroup
           preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
         >
-          {intrdduction.map((p) => (
+          {introduction.map((p) => (
             <Image src={p} />
           ))}
         </Image.PreviewGroup>

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { Menu } from "antd";
+import { Menu, Tabs } from "antd";
 import "./about.css";
 import Introduction from "./introduction";
 import Company from "./company";
 import Contact from "./contact_us";
+import _img from "../image/img";
+
+const { TabPane } = Tabs;
+
 function About() {
   const [current, setCurrent] = useState("1");
   const [currentContent, setCurrentContent] = useState(<Introduction />);
@@ -24,30 +28,20 @@ function About() {
 
   return (
     <div style={{ marginTop: 10 }}>
-      <Company />
-      <div style={{ display: "flex", marginTop: 20, marginLeft: 30 }}>
-        <div style={{ flex: 0.3, textAlign: "center" }}>
-          {/*<Image src={sing_shen} style={{ width: 60, marginLeft: 50 }} />*/}
-          <h3 style={{ color: "#1e90ff", marginTop: 30, marginLeft: 20 }}>
-            关于安徽兴申
-          </h3>
-          <div>
-            <Menu
-              style={{ textAlign: "center" }}
-              theme={"dark"}
-              onClick={currentKey}
-              selectedKeys={[current]}
-            >
-              <Menu.Item key={"1"}>公司简介</Menu.Item>
-              <Menu.Item key={"2"}>联系我们</Menu.Item>
-            </Menu>
-          </div>
-        </div>
-        <div
-          style={{ textAlign: "left", flex: 0.7, padding: 50, fontSize: 16 }}
+      <Company img={[_img.about_us, _img.contact_us]} />
+      <div style={{ display: "flex", marginTop: 70, marginLeft: 30 }}>
+        <Tabs
+          type="card"
+          tabPosition={"left"}
+          style={{ width: window.innerWidth / 1.2, marginLeft: "10%" }}
         >
-          {currentContent}
-        </div>
+          <TabPane tab={<div>公司简介</div>} key="1">
+            <Introduction />
+          </TabPane>
+          <TabPane tab={<div>联系我们</div>} key="2">
+            <Contact />
+          </TabPane>
+        </Tabs>
       </div>
     </div>
   );
