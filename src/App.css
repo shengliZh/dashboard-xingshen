@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.Link_text {
+  color: #282c34;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e90ff;
+  /*text-decoration: none;*/
+}
+
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  /*color: #fff;*/
+  background-color: #e9f6fe;
+}

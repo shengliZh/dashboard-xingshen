@@ -1,0 +1,26 @@
+.more_style {
+  text-align: center;
+  cursor: pointer;
+  color: #1a338f;
+}
+
+.more_style:hover {
+  color: red;
+}
+
+.more_icon {
+  margin-top: 15px;
+  color: #1a338f;
+}
+
+.more_icon:hover {
+  color: red;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px;
+  color: #1a338f;
+}

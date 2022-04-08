@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>无缝滚动</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      #main {
+        width: 800px;
+        margin: 100px auto;
+        text-align: center;
+      }
+      #box {
+        width: 800px;
+        height: 200px;
+        margin: 20px auto;
+        position: relative; /*相对于起点*/
+        /*background:red;*/
+        overflow: hidden;
+      }
+      ul {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      ul li {
+        list-style: none;
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin: 0px 1px;
+      }
+      #main button {
+        padding: 10px;
+        margin: 0px 10px;
+        border: 0px;
+        background: #ddd;
+      }
+      #main button:hover {
+        background: #e9af16;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h2>无缝滚动</h2>
+      <div id="box">
+        <ul>
+          <li><img src={require("../../img/qiantai.jpg")} alt="前台" /></li>
+          <li><img src={require("../../img/office.jpg")} alt="办公室" /></li>
+          <li><img src={require("../../img/office_corner.jpg")} alt="办公室一角" /></li>
+          <li><img src={require("../../img/office_fore_bar.jpg")} alt="接待室" /></li>
+        </ul>
+      </div>
+      <button>向左</button><button>向右</button>
+    </div>
+
+    <script>
+      var oBox = document.getElementById("box");
+      var aUl = oBox.getElementsByTagName("ul")[0];
+      var aLi = oBox.getElementsByTagName("li");
+      var speed = 2;
+
+      aUl.innerHTML = aUl.innerHTML + aUl.innerHTML; //使li增加一倍
+      aUl.style.width = aLi[0].offsetWidth * aLi.length + "px"; //修改aUl框的宽度,注意单位
+
+      function move() {
+        //向左移动aUl.offsetLeft是负的,我们需要把aUl的一半宽度放置在div右侧
+        if (aUl.offsetLeft < -aUl.offsetWidth / 2) {
+          aUl.style.left = 0 + "px"; //将ul放回原位
+        }
+        //向右移动aUl.offsetLeft是大于0的,我们需要把aUl的一半宽度放置在div左侧
+        if (aUl.offsetLeft > 0) {
+          aUl.style.left = -aUl.offsetWidth / 2 + "px"; //放置在div左侧,left为负值
+        }
+        aUl.style.left = aUl.offsetLeft - speed + "px"; //整体移动ul,右
+      }
+
+      timer = setInterval(move, 30);
+
+      aUl.onmouseover = function () {
+        clearInterval(timer);
+      };
+
+      aUl.onmouseout = function () {
+        timer = setInterval(move, 30);
+      };
+
+      var aBtn = document.getElementsByTagName("button");
+      aBtn[0].onmouseover = function () {
+        speed = 2;
+      };
+      aBtn[1].onmouseover = function () {
+        speed = -2;
+      };
+    </script>
+  </body>
+</html>
