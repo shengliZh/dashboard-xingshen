@@ -34,10 +34,13 @@ function Introduction() {
         marginLeft: 50,
       }}
     >
-      <Slider {...settings} style={{ width: 400 }}>
+      <Slider
+        {...settings}
+        style={{ width: 400, margin: 20, marginBottom: 50 }}
+      >
         {introduction.map((p) => {
           return (
-            <div>
+            <div style={{ padding: 20 }}>
               <Image
                 style={{ height: 400 }}
                 src={p}

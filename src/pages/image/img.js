@@ -64,6 +64,10 @@ const product_4 = require("../../img/product_4.jpg");
 const product_5 = require("../../img/product_5.jpg");
 const product_6 = require("../../img/product_6.jpg");
 
+//证书
+const zhengshu1 = require("../../img/renzhengzhengshu1.jpeg");
+const zhengshu2 = require("../../img/renzhengzhengshu2.jpeg");
+
 export default {
   yinshuaji,
   yinshuajicanshu,
@@ -123,4 +127,6 @@ export default {
   product_4,
   product_5,
   product_6,
+  zhengshu2,
+  zhengshu1,
 };

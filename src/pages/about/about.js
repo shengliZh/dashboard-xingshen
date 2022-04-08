@@ -1,31 +1,15 @@
 import React, { useState } from "react";
-import { Menu, Tabs } from "antd";
+import { Image, Menu, Tabs } from "antd";
 import "./about.css";
 import Introduction from "./introduction";
 import Company from "./company";
 import Contact from "./contact_us";
+import Honor from "./honor";
 import _img from "../image/img";
 
 const { TabPane } = Tabs;
 
 function About() {
-  const [current, setCurrent] = useState("1");
-  const [currentContent, setCurrentContent] = useState(<Introduction />);
-  const currentKey = (e) => {
-    setCurrent(e.key);
-    switch (e.key) {
-      case "1":
-        setCurrentContent(<Introduction />);
-        break;
-      case "2":
-        setCurrentContent(<Contact />);
-        break;
-      default:
-        setCurrentContent(<Introduction />);
-        break;
-    }
-  };
-
   return (
     <div style={{ marginTop: 10 }}>
       <Company img={[_img.about_us, _img.contact_us]} />
@@ -40,6 +24,9 @@ function About() {
           </TabPane>
           <TabPane tab={<div>联系我们</div>} key="2">
             <Contact />
+          </TabPane>
+          <TabPane tab={<div>荣誉资质</div>} key="3">
+            <Honor />
           </TabPane>
         </Tabs>
       </div>
