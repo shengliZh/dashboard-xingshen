@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Image } from "antd";
 import _img from "../image/img";
+import "../factory/factory.css";
 
 const img = [_img.zhengshu1, _img.zhengshu2];
 
@@ -12,6 +13,7 @@ function Honor() {
         display: "flex",
         width: window.innerWidth / 1.6,
         marginLeft: 50,
+        marginBottom: 30,
       }}
     >
       {img.map((p, index) => {
@@ -23,6 +25,7 @@ function Honor() {
               width: "50%",
               marginLeft: 30,
             }}
+            className="device_bg"
             key={`${index}`}
           >
             <Image

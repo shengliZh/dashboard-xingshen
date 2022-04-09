@@ -19,7 +19,7 @@ function Device() {
   const [info, setInfo] = useState({});
 
   return (
-    <div style={{ marginTop: 30 }}>
+    <div>
       <Modal
         title={info.name}
         centered

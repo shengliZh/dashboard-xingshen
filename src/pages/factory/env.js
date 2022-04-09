@@ -6,7 +6,7 @@ import "./factory.css";
 
 function Env() {
   return (
-    <div style={{ marginTop: 30 }}>
+    <div>
       <Company img={[_img.chanpinanli]} />
       <div style={{ height: 30 }} />
       <div style={{ backgroundColor: "#f0fafa", padding: 10 }}>

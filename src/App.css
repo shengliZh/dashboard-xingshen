@@ -61,10 +61,43 @@ a:hover {
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
-  /*color: #fff;*/
-  background-color: #e9f6fe;
+  color: #fff;
+  /*background-color: #e9f6fe;*/
+  background-color: #1a338f;
 }
 
 .sub_item:hover {
-  background-color: #e9f6fe;
+  color: #fff;
+  /*background-color: #e9f6fe;*/
+  background-color: #1a338f;
+}
+
+.sub_item_select {
+  color: #fff;
+  background-color: #1a338f;
+}
+
+.font_shadow {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #1a338f;
+  text-shadow: 1px 1px 0 #2260b1;
+}
+
+.font_shadow_3D {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 700;
+  color: #1a338f;
+  text-shadow: 1px 1px 0 #2260b1, 2px 2px 0 #2260b1;
+}
+
+.img_shadow {
+  box-shadow: 5px 5px 5px #2260b1;
+  height: 50px;
+  margin-top: 30px;
+  background-color: #ebf6fb;
 }

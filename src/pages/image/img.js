@@ -68,6 +68,11 @@ const product_6 = require("../../img/product_6.jpg");
 const zhengshu1 = require("../../img/renzhengzhengshu1.jpeg");
 const zhengshu2 = require("../../img/renzhengzhengshu2.jpeg");
 
+//联系方式
+const lianxifangshi = require("../../img/lianxifangshi.png");
+const lianxidianhua = require("../../img/lianxidianhua.png");
+const address = require("../../img/address.png");
+
 export default {
   yinshuaji,
   yinshuajicanshu,
@@ -129,4 +134,7 @@ export default {
   product_6,
   zhengshu2,
   zhengshu1,
+  lianxifangshi,
+  lianxidianhua,
+  address,
 };

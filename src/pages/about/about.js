@@ -16,7 +16,7 @@ function About() {
     setTabKey(key);
   };
   return (
-    <div style={{ marginTop: 10 }}>
+    <div>
       <Company img={[_img.about_us, _img.contact_us]} />
       <div style={{ display: "flex", marginTop: 70, marginLeft: 30 }}>
         <Tabs
