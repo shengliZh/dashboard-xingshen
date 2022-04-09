@@ -53,26 +53,26 @@ function Home() {
     <div style={{ textAlign: "center" }}>
       <Company img={[_img.about_us, _img.yewu]} />
       <div style={{ height: 30 }} />
-      <div style={{ backgroundColor: "#f0f0f0" }}>
+      <div style={{ backgroundColor: "#1a338f" }}>
         <div
           style={{
             fontWeight: "bold",
             marginTop: 50,
             fontSize: 22,
             paddingTop: 20,
-            color: "#1a338f",
+            color: "#fff",
           }}
         >
-          关于安微兴申
+          关于安徽兴申
         </div>
         <div style={{ display: "flex" }}>
-          <div style={{ flex: 0.4 }} />
+          <div style={{ flex: 0.43 }} />
           <div
             style={{
               flex: 0.2,
               fontWeight: "bold",
               fontSize: 22,
-              color: "#1a338f",
+              color: "#fff",
               textAlign: "right",
             }}
           >
@@ -81,7 +81,7 @@ function Home() {
           <div style={{ flex: 0.4 }} />
         </div>
         <div style={{ display: "flex" }}>
-          <div style={{ flex: 0.4 }} />
+          <div style={{ flex: 0.43 }} />
           <div style={{ flex: 0.2, backgroundColor: "gray", height: 1 }} />
           <div style={{ flex: 0.4 }} />
         </div>
@@ -90,6 +90,7 @@ function Home() {
           <Introduction />
           <div style={{ width: "20%" }} />
         </div>
+          <div style={{height: 50}}/>
       </div>
       <div style={{ height: 30 }} />
       <div style={{ display: "flex" }}>

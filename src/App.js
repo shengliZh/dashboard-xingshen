@@ -8,7 +8,6 @@ import About from "./pages/about/about";
 import Home from "./pages/home/home";
 import Production from "./pages/production/production";
 import history from "./route/my-history";
-import Factory from "./pages/factory/factory";
 import Env from "./pages/factory/env";
 import Device from "./pages/factory/device";
 
@@ -32,38 +31,57 @@ function App() {
         style={{
           position: "fixed",
           width: "100%",
-          height: 64,
+          height: 100,
           zIndex: 100,
           background: "#fff",
           paddingTop: 0,
           textAlign: "center",
         }}
       >
-        <div style={{ display: "flex", width: "100%", height: 64 }}>
+        <div style={{ display: "flex", width: "100%", height: 100 }}>
           <img
             src={logo}
             style={{
-              height: 64,
+              height: 100,
               paddingTop: 7,
               marginLeft: 50,
               alignSelf: "center",
             }}
             // className="App-logo"
           />
-          <strong style={{ color: "#1A338F", width: "300px", fontSize: 17 }}>
+          <strong
+            style={{
+              color: "#1A338F",
+              width: "300px",
+              fontSize: 17,
+              marginTop: 20,
+              marginLeft: -50,
+            }}
+          >
             安徽兴申科技有限公司
           </strong>
           <Menu
             theme={"light"}
             mode={"horizontal"}
-            style={{ marginLeft: 100, width: "100%" }}
+            style={{
+              marginRight: 100,
+              width: "60%",
+              height: 70,
+              position: "absolute",
+              bottom: 0,
+              right: 0,
+            }}
             selectedKeys={[current]}
             onClick={(e) => navigate(e.key)}
           >
             <Menu.Item key={"/"}>首页</Menu.Item>
             <SubMenu key={"/factory"} title={"工厂和设备"}>
-              <Menu.Item key={"/factory/env"}>工厂环境</Menu.Item>
-              <Menu.Item key={"/factory/device"}>设备展示</Menu.Item>
+              <Menu.Item key={"/factory/env"} className="sub_item">
+                工厂环境
+              </Menu.Item>
+              <Menu.Item key={"/factory/device"} className="sub_item">
+                设备展示
+              </Menu.Item>
             </SubMenu>
             <Menu.Item key={"/production"}>产品演示</Menu.Item>
             <Menu.Item key={"/about"}>公司介绍</Menu.Item>
@@ -74,7 +92,7 @@ function App() {
       <Content
         style={{
           backgroundColor: "#f0f0f0",
-          marginTop: 64,
+          marginTop: 100,
           width: window.innerWidth,
         }}
       >

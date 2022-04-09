@@ -11,7 +11,7 @@ const { Step } = Steps;
 function Contact() {
   const [showPop, setShowPop] = useState(true);
   return (
-    <div style={{ marginLeft: 50, width: "80%" }}>
+    <div style={{ marginLeft: 50, width: window.innerWidth / 1.6 }}>
       <div style={{ backgroundColor: "#fff" }}>
         <div
           style={{

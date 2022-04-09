@@ -29,7 +29,7 @@ function Introduction() {
     <div
       style={{
         display: "flex",
-        width: "80%",
+        width: window.innerWidth / 1.6,
         backgroundColor: "#fff",
         marginLeft: 50,
       }}
@@ -38,9 +38,9 @@ function Introduction() {
         {...settings}
         style={{ width: 400, margin: 20, marginBottom: 50 }}
       >
-        {introduction.map((p) => {
+        {introduction.map((p, index) => {
           return (
-            <div style={{ padding: 20 }}>
+            <div style={{ padding: 20 }} key={`${index}`}>
               <Image
                 style={{ height: 400 }}
                 src={p}
@@ -55,8 +55,8 @@ function Introduction() {
         <Image.PreviewGroup
           preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
         >
-          {introduction.map((p) => (
-            <Image src={p} />
+          {introduction.map((p, index) => (
+            <Image src={p} key={`${index}`} />
           ))}
         </Image.PreviewGroup>
       </div>

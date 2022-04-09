@@ -57,6 +57,7 @@ function Production_demo(props) {
                 src={p}
                 preview={false}
                 style={{ margin: 10, height: 300, width: 200 }}
+                className="device_bg"
               />
             </div>
           );

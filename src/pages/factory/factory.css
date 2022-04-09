@@ -1,0 +1,12 @@
+.device_bg {
+  border: 1px solid #fafafa;
+  -webkit-box-shadow: #ccc 0px 10px 10px;
+  -moz-box-shadow: #ccc 0px 10px 10px;
+  box-shadow: #ccc 0px 10px 10px;
+}
+
+.device_bg:hover {
+  -webkit-box-shadow: #1a338f 0px 10px 10px;
+  -moz-box-shadow: #1a338f 0px 10px 10px;
+  box-shadow: #1a338f 0px 10px 10px;
+}

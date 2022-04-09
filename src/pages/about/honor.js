@@ -7,8 +7,14 @@ const img = [_img.zhengshu1, _img.zhengshu2];
 function Honor() {
   const [visible, setVisible] = useState(false);
   return (
-    <div style={{ display: "flex", width: "80%", marginLeft: 50 }}>
-      {img.map((p) => {
+    <div
+      style={{
+        display: "flex",
+        width: window.innerWidth / 1.6,
+        marginLeft: 50,
+      }}
+    >
+      {img.map((p, index) => {
         return (
           <div
             style={{
@@ -17,6 +23,7 @@ function Honor() {
               width: "50%",
               marginLeft: 30,
             }}
+            key={`${index}`}
           >
             <Image
               src={p}
@@ -31,8 +38,8 @@ function Honor() {
         <Image.PreviewGroup
           preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
         >
-          {img.map((p) => (
-            <Image src={p} />
+          {img.map((p, index) => (
+            <Image src={p} key={`${index}`} />
           ))}
         </Image.PreviewGroup>
       </div>

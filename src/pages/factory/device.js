@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { Button, Card, Image, Modal } from "antd";
-import {
-  ArrowRightOutlined,
-  CloseOutlined,
-  MoreOutlined,
-} from "@ant-design/icons";
+import { Image, Modal } from "antd";
+import { CloseOutlined, MoreOutlined } from "@ant-design/icons";
 import { devices } from "../../constant/constant";
 import Company from "../about/company";
 import _img from "../image/img";
+import "./factory.css";
 
-const gridStyle = {
-  width: "33%",
-  textAlign: "center",
-};
+const device1 = [devices[0], devices[1], devices[2]];
+const device2 = [devices[3], devices[4], devices[5]];
+const device3 = [devices[6], devices[7], devices[8]];
+const device4 = [devices[9], devices[10], devices[11]];
+const device5 = [devices[12], devices[13], devices[14]];
+const device6 = [devices[15]];
+const allDevices = [device1, device2, device3, device4, device5, device6];
 
 function Device() {
   const [visible, setVisible] = useState(false);
@@ -69,58 +69,74 @@ function Device() {
       </Modal>
       <Company img={[_img.shebeijieshao]} />
       <div style={{ height: 30 }} />
+      <div style={{ backgroundColor: "#1a338f", padding: 10 }}>
+        <strong style={{ fontSize: 24, color: "white" }}>设备展示</strong>
+      </div>
       <div style={{ display: "flex", marginTop: 20 }}>
         <div style={{ width: "10%" }} />
-        <Card
-          style={{ marginTop: 30, backgroundColor: "#f1eff0", width: "80%" }}
-          title={<strong style={{ fontSize: 24 }}>设备展示</strong>}
-        >
-          {devices.map((p) => {
+        <div style={{ backgroundColor: "#f1eff0", width: "80%" }}>
+          {allDevices.map((device, i) => {
             return (
-              <Card.Grid style={gridStyle}>
-                <div style={{ backgroundColor: "#fff", textAlign: "center" }}>
-                  <Image
-                    src={p.src}
-                    style={{ height: 300, marginTop: 20, marginBottom: 20 }}
-                    preview={false}
-                  />
-                  <div
-                    style={{
-                      fontSize: 16,
-                      fontWeight: "200",
-                    }}
-                  >
-                    {p.name}
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      marginBottom: 10,
-                    }}
-                  >
-                    <div className="title" style={{ flex: "0.98" }} />
+              <div
+                style={{ marginTop: 30, display: "flex" }}
+                key={`device${i}`}
+              >
+                {device.map((p, index) => {
+                  return (
                     <div
-                      className="more_style"
-                      onClick={() => {
-                        setInfo({
-                          name: p.name,
-                          desc: p.desc,
-                          src: p.src,
-                          param: p.param,
-                        });
-                        setVisible(true);
+                      style={{
+                        backgroundColor: "#fff",
+                        textAlign: "center",
+                        width: "30%",
+                        marginLeft: 20,
                       }}
-                      style={{ margin: 10 }}
+                      className="device_bg"
+                      key={`device${i}${index}`}
                     >
-                      <MoreOutlined className="more_icon" />
-                      MORE
+                      <Image
+                        src={p.src}
+                        style={{ height: 300, marginTop: 20, marginBottom: 20 }}
+                        preview={false}
+                      />
+                      <div
+                        style={{
+                          fontSize: 16,
+                          fontWeight: "200",
+                        }}
+                      >
+                        {p.name}
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          marginBottom: 10,
+                        }}
+                      >
+                        <div className="title" style={{ flex: "0.98" }} />
+                        <div
+                          className="more_style"
+                          onClick={() => {
+                            setInfo({
+                              name: p.name,
+                              desc: p.desc,
+                              src: p.src,
+                              param: p.param,
+                            });
+                            setVisible(true);
+                          }}
+                          style={{ margin: 10 }}
+                        >
+                          <MoreOutlined className="more_icon" />
+                          MORE
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </Card.Grid>
+                  );
+                })}
+              </div>
             );
           })}
-        </Card>
+        </div>
       </div>
     </div>
   );

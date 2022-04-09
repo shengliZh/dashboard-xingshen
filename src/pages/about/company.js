@@ -19,9 +19,9 @@ function Company(props) {
   return (
     <div>
       <Slider {...settings}>
-        {props.img.map((p) => {
+        {props.img.map((p, index) => {
           return (
-            <div>
+            <div key={`${index}`}>
               <Image
                 src={p}
                 preview={false}

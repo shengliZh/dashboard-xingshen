@@ -59,6 +59,7 @@ function Factory_env(props) {
                 src={p}
                 preview={false}
                 style={{ margin: 10, height: 300 }}
+                className="device_bg"
               />
             </div>
           );

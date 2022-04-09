@@ -27,12 +27,12 @@ function Introduction_Home() {
   const [visible, setVisible] = useState(false);
   return (
     <div style={{ display: "flex" }}>
-      <Slider {...settings} style={{ width: 400 }}>
+      <Slider {...settings} style={{ width: 500, marginTop: -50 }}>
         {introduction.map((p) => {
           return (
             <div>
               <Image
-                style={{ height: 400, width: 350 }}
+                style={{ height: 500, width: 450 }}
                 src={p}
                 preview={visible}
                 onClick={() => setVisible(true)}
@@ -57,7 +57,7 @@ function Introduction_Home() {
           fontSize: 17,
           alignSelf: "center",
           marginBottom: 100,
-          color: "#1a338f",
+          color: "#fff",
         }}
       >
         安徽兴申科技有限公司成立于2021年，是一家专业PCB设计，PCB生产，元器件采购，SMT贴片加工，产品组装测试，致力于为客户提供样品，中小批量，量产一站式电子制造服务的政府扶持企业。公司的服务客户遍及各行业的知名大型企业，且正在通过优良的性价比获得越来越多的客户青睐。
