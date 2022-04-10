@@ -31,13 +31,13 @@ function Env() {
             <Image
               src={_img.qiantai}
               preview={false}
-              style={{ height: 400 }}
+              style={{ height: 400, width: "80%" }}
               className="device_bg"
             />
             <Image
               src={_img.office_bar}
               preview={false}
-              style={{ height: 400 }}
+              style={{ height: 400, width: "80%" }}
               className="device_bg"
             />
           </Space>

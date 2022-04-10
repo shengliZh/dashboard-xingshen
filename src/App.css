@@ -53,8 +53,49 @@ a:hover {
   /*text-decoration: none;*/
 }
 
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+  border-bottom: 0px solid #ebf6fb;
+}
+
+.ant-menu-title-content {
+  transition: color 0.3s;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.ant-menu-title-content:hover {
+  transition: color 0.3s;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  color: #1a338f;
+  font-weight: bold;
+  background-color: #e9f6fe;
+}
+
+.ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-title:hover {
+  padding: 0;
+  color: #1a338f;
+  font-weight: bold;
+}
+
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover {
+  color: #1a338f;
+  font-weight: bold;
+  background-color: #e9f6fe;
+}
+
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
@@ -62,14 +103,19 @@ a:hover {
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
   color: #fff;
-  /*background-color: #e9f6fe;*/
   background-color: #1a338f;
 }
 
 .sub_item:hover {
-  color: #fff;
-  /*background-color: #e9f6fe;*/
-  background-color: #1a338f;
+  color: #1a338f;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.menu_item:hover {
+  color: #1a338f;
+  font-weight: bold;
+  background-color: #ebf6fb;
 }
 
 .sub_item_select {
@@ -117,4 +163,11 @@ a:hover {
   cursor: pointer;
   letter-spacing: 10px;
   text-shadow: 1px 1px 0 #2260b1, 2px 2px 0 #2260b1;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+  margin-top: -1px;
+  margin-bottom: 0;
+  padding: 0 20px;
 }

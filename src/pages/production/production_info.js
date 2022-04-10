@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Image, Tabs } from "antd";
+import { Image } from "antd";
 import { MoreOutlined } from "@ant-design/icons";
-
-const { TabPane } = Tabs;
 
 function Production_Info(props) {
   const [info, setInfo] = useState({});
@@ -25,6 +23,7 @@ function Production_Info(props) {
           marginTop: 0,
           padding: 20,
           display: "flex",
+          justifyContent: "center",
         }}
       >
         {props.img.map((p) => {
@@ -32,8 +31,8 @@ function Production_Info(props) {
             <div
               style={{
                 textAlign: "center",
-                width: "30%",
-                marginLeft: 20,
+                width: "26%",
+                margin: 20,
               }}
               className="device_bg"
               key={`${p.name}${Math.random()}`}

@@ -1,0 +1,13 @@
+.view_detail {
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: #ff0000;
+}
+
+.view_detail:hover {
+  font-size: 16px;
+  color: #1a338f;
+  cursor: pointer;
+  text-align: center;
+}
