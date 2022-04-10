@@ -64,7 +64,7 @@ function Left_pic(props) {
                 marginLeft: -10,
               }}
             >
-              <Image src={_img.company_yy} />
+              <Image src={_img.company_yy} preview={false}/>
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@ function Right_pic(props) {
                 left: "30%",
               }}
             >
-              <Image src={_img.company_yy} />
+              <Image src={_img.company_yy} preview={false} />
             </div>
           </div>
         </div>
