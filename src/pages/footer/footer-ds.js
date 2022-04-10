@@ -98,8 +98,6 @@ function FooterDs() {
           <div
             style={{
               display: "flex",
-              // position: "absolute",
-              // right: 0,
               height: 100,
               paddingTop: 20,
               marginLeft: 100,
@@ -118,7 +116,6 @@ function FooterDs() {
             </div>
           </div>
         </div>
-        <div />
       </div>
     </div>
   );

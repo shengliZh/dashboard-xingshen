@@ -12,6 +12,7 @@ import Contact from "./pages/contact-us/contact";
 import FooterDs from "./pages/footer/footer-ds";
 import CusHeader from "./pages/header/header";
 import Recruitment from "./pages/recruitment/recruitment";
+import Business from "./pages/business/business";
 
 const { Header, Content, Footer } = Layout;
 const logo = require("./img/xingshen.png");
@@ -36,7 +37,7 @@ function App() {
         style={{
           backgroundColor: "#f0f0f0",
           marginTop: 100,
-          width: window.innerWidth,
+          width: '100%'
         }}
       >
         <div
@@ -54,6 +55,7 @@ function App() {
             <Route path={"/factory/env"} element={<Env />} />
             <Route path={"/factory/device"} element={<Device />} />
             <Route path={"/about"} element={<About />} />
+            <Route path={"/business"} element={<Business />} />
             <Route path={"/recruitment"} element={<Recruitment />} />
             <Route path={"/contact_us"} element={<Contact />} />
           </Routes>

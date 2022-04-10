@@ -138,6 +138,24 @@ function Header() {
             </div>
           </Menu.Item>
           <Menu.Item
+            key={"/business"}
+            style={{ padding: 0, margin: 0, marginLeft: 10 }}
+          >
+            <div
+              style={{
+                padding: 10,
+                paddingTop: 0,
+                textAlign: "center",
+                height: 69,
+              }}
+              className={
+                current === "/business" ? "sub_item_select" : "menu_item"
+              }
+            >
+              业务范围
+            </div>
+          </Menu.Item>
+          <Menu.Item
             key={"/about"}
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
           >

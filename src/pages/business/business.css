@@ -1,0 +1,17 @@
+.bg {
+  box-shadow: 2px 0px 0px 0px #ccc, 0px 2px 0px 0px #ccc, 2px 2px 2px 2px #ccc;
+}
+
+.text_font {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: bold;
+  font-size: 60px;
+  text-shadow: 0px 0px 20px yellow, 0px 0px 10px orange, 0px 0px 10px orangered,
+    0px 0px 10px red;
+}
+
+.text_font1 {
+  color: #1a338f;
+  font-weight: bold;
+  font-size: 22px;
+}

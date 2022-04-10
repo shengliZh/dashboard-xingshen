@@ -55,6 +55,7 @@ const product = require("../../img/product.jpeg");
 const rencaizhaopin = require("../../img/rencaizhaopin.jpeg");
 const shebeijieshao = require("../../img/shebeijieshao.png");
 const yewu = require("../../img/yewu.jpeg");
+const yewufanwei = require("../../img/yewufanwei.jpeg");
 
 //产品
 const product_1 = require("../../img/product_1.jpg");
@@ -72,6 +73,14 @@ const zhengshu2 = require("../../img/renzhengzhengshu2.jpeg");
 const lianxifangshi = require("../../img/lianxifangshi.png");
 const lianxidianhua = require("../../img/lianxidianhua.png");
 const address = require("../../img/address.png");
+
+//业务范围
+const ODM_zhizao = require("../../img/ODM_zhizao.jpeg");
+const OEM_jiagong = require("../../img/OEM_jiagong.jpeg");
+const PCBA_daigong = require("../../img/PCBA_daigong.jpeg");
+const PCBA_zhijian = require("../../img/PCBA_zhijian.jpeg");
+const SMT_tiepian = require("../../img/SMT_tiepian.jpeg");
+const company_yy = require("../../img/company_yy.png");
 
 export default {
   yinshuaji,
@@ -126,6 +135,7 @@ export default {
   rencaizhaopin,
   shebeijieshao,
   yewu,
+  yewufanwei,
   product_1,
   product_2,
   product_3,
@@ -137,4 +147,10 @@ export default {
   lianxifangshi,
   lianxidianhua,
   address,
+  SMT_tiepian,
+  ODM_zhizao,
+  OEM_jiagong,
+  PCBA_zhijian,
+  PCBA_daigong,
+  company_yy,
 };
