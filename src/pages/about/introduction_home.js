@@ -28,9 +28,9 @@ function Introduction_Home() {
   return (
     <div style={{ display: "flex" }}>
       <Slider {...settings} style={{ width: 500, marginTop: -50 }}>
-        {introduction.map((p) => {
+        {introduction.map((p, index) => {
           return (
-            <div>
+            <div key={`${index}`}>
               <Image
                 style={{ height: 500, width: 450 }}
                 src={p}
@@ -45,8 +45,8 @@ function Introduction_Home() {
         <Image.PreviewGroup
           preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}
         >
-          {introduction.map((p) => {
-            return <Image src={p} />;
+          {introduction.map((p, index) => {
+            return <Image src={p} key={`${index}`} />;
           })}
         </Image.PreviewGroup>
       </div>

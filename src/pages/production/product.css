@@ -1,14 +1,25 @@
 .tab_bar {
   color: #000;
   background-color: #fff;
+  border: 1px solid #fafafa;
+  -webkit-box-shadow: #ccc 0px 10px 10px;
+  -moz-box-shadow: #ccc 0px 10px 10px;
+  box-shadow: #ccc 0px 10px 10px;
 }
 
 .tab_bar:hover {
   color: #fff;
+  border: 1px solid #1a338f;
   background-color: #1a338f;
+  -webkit-box-shadow: #1a338f 0px 10px 10px;
+  -moz-box-shadow: #1a338f 0px 10px 10px;
+  box-shadow: #1a338f 0px 10px 10px;
 }
 
 .tab_bar_select {
   color: #fff;
   background-color: #1a338f;
+  -webkit-box-shadow: #1a338f 0px 10px 10px;
+  -moz-box-shadow: #1a338f 0px 10px 10px;
+  box-shadow: #1a338f 0px 10px 10px;
 }

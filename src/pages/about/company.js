@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Company(props) {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

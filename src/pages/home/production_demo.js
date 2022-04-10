@@ -50,9 +50,9 @@ function Production_demo(props) {
   return (
     <div style={{ backgroundColor: "#fff" }}>
       <Slider {...settings}>
-        {props.img.map((p) => {
+        {props.img.map((p, index) => {
           return (
-            <div>
+            <div key={`${index}`}>
               <Image
                 src={p}
                 preview={false}

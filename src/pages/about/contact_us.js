@@ -11,8 +11,15 @@ const { Step } = Steps;
 function Contact() {
   const [showPop, setShowPop] = useState(true);
   return (
-    <div style={{ marginLeft: 50, width: window.innerWidth / 1.6 }}>
-      <div style={{ backgroundColor: "#fff" }}>
+    <div
+      style={{
+        marginLeft: 50,
+        width: window.innerWidth / 1.6,
+        marginRight: 50,
+        marginBottom: 50,
+      }}
+    >
+      <div style={{ backgroundColor: "#fff" }} className="about_company">
         <div
           style={{
             fontSize: 22,
@@ -72,7 +79,7 @@ function Contact() {
           />
         </Steps>
       </div>
-      <div style={{ marginTop: 20 }}>
+      <div style={{ marginTop: 20 }} className="about_company">
         <Map
           center={new window.BMapGL.Point(118.352155, 31.624036)}
           zoom={12}

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import "./App.css";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import { Image, Layout, Menu } from "antd";
-import moment from "moment";
+import { Image, Layout, Menu, Space } from "antd";
 import About from "./pages/about/about";
 import Home from "./pages/home/home";
 import Production from "./pages/production/production";
@@ -12,6 +11,7 @@ import Env from "./pages/factory/env";
 import Device from "./pages/factory/device";
 import Contact from "./pages/contact-us/contact";
 import _img from "./pages/image/img";
+import FooterDs from "./pages/footer/footer-ds";
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer } = Layout;
@@ -128,7 +128,7 @@ function App() {
               right: 0,
               marginRight: "5%",
               height: 100,
-                paddingTop: 10
+              paddingTop: 10,
             }}
           >
             <Image
@@ -173,13 +173,31 @@ function App() {
         </div>
       </Content>
       <Footer
-        style={{ textAlign: "center", backgroundColor: "white", flex: 1 }}
+        style={{ textAlign: "center", backgroundColor: "#448ef7", flex: 1 }}
       >
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <img src={logo} style={{ height: 80, paddingTop: "20px" }} />
-          <div style={{ textAlign: "center", paddingTop: 30, marginLeft: 20 }}>
-            © {moment().format("YYYY")} 安徽兴申科技有限公司
-          </div>
+        <div style={{ display: "flex", position: "absolute", left: "5%" }}>
+          <img
+            src={logo}
+            className="img_shadow"
+            style={{ height: 80, paddingTop: "10px", marginTop: -3 }}
+          />
+          <FooterDs />
+        </div>
+        <div
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            padding: 20,
+            backgroundColor: "#1a338f",
+            color: "white",
+            marginLeft: -200,
+            marginRight: -50,
+            marginBottom: -40,
+            marginTop: 100,
+            paddingLeft: 200,
+          }}
+        >
+          版权所有：安徽兴申科技有限公司
         </div>
       </Footer>
     </Layout>

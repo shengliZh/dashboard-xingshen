@@ -52,16 +52,19 @@ function Slider(props) {
     >
       <div id="box">
         <ul>
-          {props.img.map((p) => {
+          {props.img.map((p, index) => {
             return (
-              <li style={{ marginLeft: 20 }}>
+              <li
+                style={{ marginLeft: 20, backgroundColor: "#fff" }}
+                key={`${index}`}
+              >
                 <div
                   style={{
                     backgroundColor: "#fff",
                     textAlign: "center",
                     height: 320,
-                    marginTop: 20,
-                    border: "5px solid #f0f0f0",
+                    margin: 10,
+                    border: "5px solid #fff",
                   }}
                 >
                   <Image

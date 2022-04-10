@@ -53,7 +53,7 @@ function Home() {
     <div style={{ textAlign: "center" }}>
       <Company img={[_img.about_us, _img.yewu]} />
       <div style={{ height: 30 }} />
-      <div style={{ backgroundColor: "#1a338f" }}>
+      <div style={{ backgroundColor: "#1a338f" }} className="about_company">
         <div
           style={{
             fontWeight: "bold",
@@ -90,7 +90,7 @@ function Home() {
           <Introduction />
           <div style={{ width: "20%" }} />
         </div>
-          <div style={{height: 50}}/>
+        <div style={{ height: 50 }} />
       </div>
       <div style={{ height: 30 }} />
       <div style={{ display: "flex" }}>

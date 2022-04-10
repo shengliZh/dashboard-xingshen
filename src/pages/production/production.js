@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs } from "antd";
 import Company from "../about/company";
 import _img from "../image/img";
 import Production_Info from "./production_info";
 import "./product.css";
+import { useLocation } from "react-router-dom";
 
 const qiche_product = [
   { src: _img.product_1 },
@@ -26,11 +27,18 @@ const category = [
 const { TabPane } = Tabs;
 
 function Production(props) {
-  const [tabKey, setTabKey] = useState("0");
+  let location = useLocation();
+  useEffect(() => {
+    let server_id = location.state;
+    if (server_id) {
+      onTabChange(server_id.key);
+    }
+  }, [location]);
+  const [tabKey, setTabKey] = useState("全部分类");
   const onTabChange = (key) => {
+    console.log("key: ", key);
     setTabKey(key);
   };
-
   return (
     <div>
       <Company img={[_img.product]} />
@@ -44,7 +52,7 @@ function Production(props) {
         tabBarStyle={{ width: 200 }}
         onChange={onTabChange}
       >
-        {category.map((p, index) => {
+        {category.map((p) => {
           return (
             <TabPane
               tab={
@@ -56,18 +64,16 @@ function Production(props) {
                     marginBottom: -10,
                     padding: 20,
                   }}
-                  className={
-                    tabKey === `${index}` ? "tab_bar_select" : "tab_bar"
-                  }
+                  className={tabKey === p.name ? "tab_bar_select" : "tab_bar"}
                 >
                   {p.name}
                 </div>
               }
-              key={`${index}`}
+              key={p.name}
             >
               <div style={{ border: "1px solid #fafafa" }}>
                 <Production_Info
-                  name={p.name}
+                  name={tabKey}
                   img={[p.img[0], p.img[1], p.img[2]]}
                 />
                 <Production_Info img={[p.img[3], p.img[4], p.img[5]]} />

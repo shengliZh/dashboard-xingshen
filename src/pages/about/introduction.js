@@ -4,6 +4,7 @@ import _img from "../image/img";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../home/home.css";
 
 const introduction = [
   _img.qiantai,
@@ -32,7 +33,10 @@ function Introduction() {
         width: window.innerWidth / 1.6,
         backgroundColor: "#fff",
         marginLeft: 50,
+        marginRight: 50,
+        marginBottom: 50,
       }}
+      className="about_company"
     >
       <Slider
         {...settings}
