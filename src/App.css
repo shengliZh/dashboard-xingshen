@@ -87,7 +87,7 @@ a:hover {
 }
 
 .font_shadow_3D {
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   letter-spacing: 10px;
   font-weight: 700;
@@ -104,17 +104,15 @@ a:hover {
 
 .foot_menu {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   letter-spacing: 10px;
-  /*font-weight: 700;*/
-  /*color: #1a338f;*/
   text-shadow: 1px 1px 0 #2260b1, 2px 2px 0 #2260b1;
 }
 
 .foot_menu:hover {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #1a338f;
   cursor: pointer;
   letter-spacing: 10px;

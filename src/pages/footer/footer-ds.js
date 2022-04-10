@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function FooterDs() {
   const navigate = useNavigate();
   return (
-    <div style={{ marginLeft: 50, marginTop: -10 }}>
+    <div style={{ marginLeft: 50 }}>
       <div style={{ display: "flex" }}>
         <Space size={20}>
           <Space direction={"vertical"} size={20}>

@@ -71,7 +71,7 @@ function Production(props) {
               }
               key={p.name}
             >
-              <div style={{ border: "1px solid #fafafa" }}>
+              <div>
                 <Production_Info
                   name={tabKey}
                   img={[p.img[0], p.img[1], p.img[2]]}

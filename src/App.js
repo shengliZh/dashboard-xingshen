@@ -173,7 +173,7 @@ function App() {
         </div>
       </Content>
       <Footer
-        style={{ textAlign: "center", backgroundColor: "#448ef7", flex: 1 }}
+        style={{ textAlign: "center", backgroundColor: "#448ef7", flex: 1, padding: 0 }}
       >
         <div style={{ display: "flex", position: "absolute", left: "5%" }}>
           <img
@@ -190,11 +190,7 @@ function App() {
             padding: 20,
             backgroundColor: "#1a338f",
             color: "white",
-            marginLeft: -200,
-            marginRight: -50,
-            marginBottom: -40,
             marginTop: 100,
-            paddingLeft: 200,
           }}
         >
           版权所有：安徽兴申科技有限公司
