@@ -19,14 +19,13 @@ function Header() {
   }, [history]);
   return (
     <div>
-      <div style={{ display: "flex", width: "100%", height: 120 }}>
+      <div style={{ display: "flex", width: "100%", height: 100 }}>
         <img
           src={logo}
-          // className="img_shadow"
           style={{
-            height: 100,
-            paddingTop: 0,
-            marginLeft: 50,
+            height: 90,
+            width: 70,
+            paddingTop: 20,
             marginTop: 0,
             alignSelf: "center",
           }}
@@ -34,10 +33,8 @@ function Header() {
         <strong
           style={{
             color: "#1A338F",
-            width: "300px",
-            fontSize: 17,
-            marginTop: 30,
-            marginLeft: -50,
+            fontSize: 14,
+              marginTop: 47
           }}
         >
           安徽兴申科技有限公司
@@ -46,13 +43,13 @@ function Header() {
           theme={"light"}
           mode={"horizontal"}
           style={{
-            marginRight: 100,
-            width: "60%",
             height: 70,
-            position: "absolute",
-            bottom: 0,
-            right: 0,
+            marginTop: 30,
+            marginLeft: 30,
             backgroundColor: "#ebf6fb",
+            borderTop: "1px solid #1a338f",
+            borderLeft: "1px solid #1a338f",
+            borderRight: "1px solid #1a338f",
           }}
           selectedKeys={[current]}
           onClick={(e) => navigate(e.key)}
@@ -62,8 +59,11 @@ function Header() {
               style={{
                 padding: 20,
                 paddingTop: 0,
+                paddingBottom: 10,
                 textAlign: "center",
                 height: 69,
+                fontSize: 14,
+                borderBottomColor: "#1a338f",
               }}
               className={current === "/" ? "sub_item_select" : "menu_item"}
             >
@@ -74,7 +74,12 @@ function Header() {
             key={"/factory"}
             title={
               <div
-                style={{ paddingLeft: 10, paddingRight: 10, height: 69 }}
+                style={{
+                  paddingLeft: 10,
+                  paddingRight: 10,
+                  height: 69,
+                  fontSize: 14,
+                }}
                 className={
                   current.includes("/factory") ? "sub_item_select" : "menu_item"
                 }
@@ -96,6 +101,7 @@ function Header() {
                   paddingLeft: 20,
                   marginTop: -10,
                   marginBottom: -10,
+                  fontSize: 14,
                 }}
               >
                 工厂环境
@@ -113,6 +119,7 @@ function Header() {
                   paddingLeft: 20,
                   marginTop: -10,
                   marginBottom: -10,
+                  fontSize: 14,
                 }}
               >
                 设备展示
@@ -129,6 +136,7 @@ function Header() {
                 paddingTop: 0,
                 textAlign: "center",
                 height: 69,
+                fontSize: 14,
               }}
               className={
                 current === "/production" ? "sub_item_select" : "menu_item"
@@ -147,6 +155,7 @@ function Header() {
                 paddingTop: 0,
                 textAlign: "center",
                 height: 69,
+                fontSize: 14,
               }}
               className={
                 current === "/business" ? "sub_item_select" : "menu_item"
@@ -165,6 +174,7 @@ function Header() {
                 paddingTop: 0,
                 textAlign: "center",
                 height: 69,
+                fontSize: 14,
               }}
               className={current === "/about" ? "sub_item_select" : "menu_item"}
             >
@@ -181,6 +191,7 @@ function Header() {
                 paddingTop: 0,
                 textAlign: "center",
                 height: 69,
+                fontSize: 14,
               }}
               className={
                 current === "/recruitment" ? "sub_item_select" : "menu_item"
@@ -224,14 +235,19 @@ function Header() {
             className="img_shadow"
           />
           <div style={{ height: 100, marginLeft: 20 }}>
-            <div className="font_shadow">全国咨询热线</div>
-            <div style={{ marginTop: -30 }} className="font_shadow_3D">
+            <div className="font_shadow" style={{ fontSize: 16 }}>
+              全国咨询热线
+            </div>
+            <div
+              className="font_shadow_3D"
+              style={{ marginTop: -30, fontSize: 16 }}
+            >
               18069673763
             </div>
           </div>
         </div>
       </div>
-      <div style={{ width: "100%", height: 0.5, backgroundColor: "gray" }} />
+      <div style={{ width: "100%", height: 1, backgroundColor: "#1a338f" }} />
     </div>
   );
 }

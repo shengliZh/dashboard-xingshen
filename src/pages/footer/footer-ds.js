@@ -6,7 +6,7 @@ import logo from "../../img/xingshen.png";
 function FooterDs() {
   const navigate = useNavigate();
   return (
-    <div style={{ display: "flex", width: "100%", marginLeft: 50 }}>
+    <div style={{ display: "flex", marginLeft: 50 }}>
       <img
         src={logo}
         className="img_shadow"
@@ -104,11 +104,14 @@ function FooterDs() {
             }}
           >
             <div style={{ height: 100, marginLeft: 20, marginTop: 0 }}>
-              <div className="font_shadow_3D" style={{ color: "white" }}>
+              <div
+                className="font_shadow_3D"
+                style={{ color: "white", fontSize: 12 }}
+              >
                 全国咨询热线: 18069673763
               </div>
               <div
-                style={{ color: "white", marginTop: 10 }}
+                style={{ color: "white", marginTop: 10, fontSize: 12 }}
                 className="font_shadow_3D"
               >
                 安徽省马鞍山市郑浦港新区和州大道蒲建标准化厂房1号楼

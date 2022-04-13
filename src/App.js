@@ -28,7 +28,6 @@ function App() {
           zIndex: 100,
           background: "#ebf6fb",
           paddingTop: 0,
-          textAlign: "center",
         }}
       >
         <CusHeader />
@@ -37,7 +36,7 @@ function App() {
         style={{
           backgroundColor: "#f0f0f0",
           marginTop: 100,
-          width: '100%'
+          width: "100%",
         }}
       >
         <div
