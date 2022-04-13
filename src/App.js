@@ -65,7 +65,6 @@ function App() {
         style={{
           textAlign: "center",
           backgroundColor: "#448ef7",
-          flex: 1,
           padding: 0,
         }}
       >
@@ -77,7 +76,6 @@ function App() {
             padding: 20,
             backgroundColor: "#1a338f",
             color: "white",
-            marginTop: 100,
           }}
         >
           版权所有：安徽兴申科技有限公司

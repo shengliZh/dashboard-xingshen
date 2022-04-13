@@ -6,7 +6,7 @@ import logo from "../../img/xingshen.png";
 function FooterDs() {
   const navigate = useNavigate();
   return (
-    <div style={{ display: "flex", position: "absolute", left: "5%" }}>
+    <div style={{ display: "flex", width: "100%", marginLeft: 50 }}>
       <img
         src={logo}
         className="img_shadow"

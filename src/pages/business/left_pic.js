@@ -30,22 +30,6 @@ function Left_pic(props) {
         <div style={{ display: "flex", marginTop: 40 }}>
           <div
             style={{
-              textAlign: "left",
-              lineHeight: "35px",
-              marginLeft: "15%",
-              width: "70%",
-              paddingTop: '4%',
-              paddingBottom: '4%',
-              paddingLeft: "10%",
-              paddingRight: '4%',
-            }}
-            className="bg"
-          >
-            {props.business.content}
-          </div>
-          <div
-            style={{
-              position: "absolute",
               marginTop: 50,
             }}
           >
@@ -60,12 +44,32 @@ function Left_pic(props) {
             <div
               style={{
                 position: "absolute",
-                marginTop: -160,
-                marginLeft: -10,
+                marginTop: -165,
+                marginLeft: -15,
               }}
             >
-              <Image src={_img.company_yy} preview={false}/>
+              <Image
+                src={_img.company_yy}
+                preview={false}
+                style={{ width: 30 }}
+              />
             </div>
+          </div>
+          <div
+            style={{
+              textAlign: "left",
+              lineHeight: "35px",
+              marginLeft: -150,
+              width: "80%",
+              paddingTop: "4%",
+              paddingBottom: "4%",
+              paddingLeft: 200,
+              paddingRight: "4%",
+              minHeight: 200,
+            }}
+            className="bg"
+          >
+            {props.business.content}
           </div>
         </div>
       </div>

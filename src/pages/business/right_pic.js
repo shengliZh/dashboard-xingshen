@@ -38,10 +38,11 @@ function Right_pic(props) {
               paddingLeft: "4%",
               paddingTop: "4%",
               paddingBottom: "4%",
-              paddingRight: "13%",
+              paddingRight: 200,
               textAlign: "left",
               lineHeight: "35px",
-              width: "70%",
+              width: "80%",
+              minHeight: 200,
             }}
             className="bg"
           >
@@ -49,9 +50,8 @@ function Right_pic(props) {
           </div>
           <div
             style={{
-              position: "absolute",
               marginTop: 60,
-              right: "20%",
+              marginLeft: -150,
             }}
           >
             <Image
@@ -65,10 +65,14 @@ function Right_pic(props) {
               style={{
                 position: "absolute",
                 marginTop: -160,
-                left: "30%",
+                marginLeft: 75,
               }}
             >
-              <Image src={_img.company_yy} preview={false} />
+              <Image
+                src={_img.company_yy}
+                preview={false}
+                style={{ width: 30, height: 30 }}
+              />
             </div>
           </div>
         </div>
