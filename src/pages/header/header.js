@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../img/xingshen.png";
-import { Image, Menu } from "antd";
+import { Image, Menu, Select } from "antd";
 import _img from "../image/img";
 import { useLocation, useNavigate } from "react-router-dom";
 import history from "../../route/my-history";
+import "../../App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { changeLocale } from "../../action/localeAction";
+import { getIntl } from "../../core/intl";
 
 const { SubMenu } = Menu;
+const { Option } = Select;
 
-function Header() {
+function Header(props) {
+  const locale = useSelector((state) => state.localeStore.currentLocale);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [current, setCurrent] = useState(pathname);
+  const onLocaleChange = (value) => {
+    dispatch(changeLocale(value));
+  };
   useEffect(() => {
     const unHistory = history.listen(({ location, action }) => {
       setCurrent(location.pathname);
@@ -34,10 +44,10 @@ function Header() {
           style={{
             color: "#1A338F",
             fontSize: 14,
-              marginTop: 47
+            marginTop: 47,
           }}
         >
-          安徽兴申科技有限公司
+          {getIntl("company_name")}
         </strong>
         <Menu
           theme={"light"}
@@ -67,7 +77,7 @@ function Header() {
               }}
               className={current === "/" ? "sub_item_select" : "menu_item"}
             >
-              首页
+              {getIntl("menu_home")}
             </div>
           </Menu.Item>
           <SubMenu
@@ -84,7 +94,7 @@ function Header() {
                   current.includes("/factory") ? "sub_item_select" : "menu_item"
                 }
               >
-                工厂和设备
+                {getIntl("menu_factory_device")}
               </div>
             }
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
@@ -104,7 +114,7 @@ function Header() {
                   fontSize: 14,
                 }}
               >
-                工厂环境
+                {getIntl("sub_menu_factory")}
               </div>
             </Menu.Item>
             <Menu.Item key={"/factory/device"}>
@@ -122,7 +132,7 @@ function Header() {
                   fontSize: 14,
                 }}
               >
-                设备展示
+                {getIntl("sub_menu_device")}
               </div>
             </Menu.Item>
           </SubMenu>
@@ -142,7 +152,7 @@ function Header() {
                 current === "/production" ? "sub_item_select" : "menu_item"
               }
             >
-              产品演示
+              {getIntl("menu_product")}
             </div>
           </Menu.Item>
           <Menu.Item
@@ -161,7 +171,7 @@ function Header() {
                 current === "/business" ? "sub_item_select" : "menu_item"
               }
             >
-              业务范围
+              {getIntl("menu_business")}
             </div>
           </Menu.Item>
           <Menu.Item
@@ -178,7 +188,7 @@ function Header() {
               }}
               className={current === "/about" ? "sub_item_select" : "menu_item"}
             >
-              公司介绍
+              {getIntl("menu_about")}
             </div>
           </Menu.Item>
           <Menu.Item
@@ -197,7 +207,7 @@ function Header() {
                 current === "/recruitment" ? "sub_item_select" : "menu_item"
               }
             >
-              人才招聘
+              {getIntl("menu_recruitment")}
             </div>
           </Menu.Item>
           <Menu.Item
@@ -215,7 +225,7 @@ function Header() {
                 current === "/contact_us" ? "sub_item_select" : "menu_item"
               }
             >
-              联系我们
+              {getIntl("menu_contact")}
             </div>
           </Menu.Item>
         </Menu>
@@ -229,6 +239,17 @@ function Header() {
             paddingTop: 10,
           }}
         >
+          <div style={{ marginRight: 20, marginTop: 30 }}>
+            <Select
+              size={"large"}
+              style={{ width: 150 }}
+              value={locale}
+              onChange={onLocaleChange}
+            >
+              <Option value={"zh-CN"}>简体中文</Option>
+              <Option value={"en-US"}>English</Option>
+            </Select>
+          </div>
           <Image
             src={_img.lianxifangshi}
             preview={false}
@@ -236,7 +257,7 @@ function Header() {
           />
           <div style={{ height: 100, marginLeft: 20 }}>
             <div className="font_shadow" style={{ fontSize: 16 }}>
-              全国咨询热线
+              {getIntl("support_hotline")}
             </div>
             <div
               className="font_shadow_3D"

@@ -5,6 +5,7 @@ import _img from "../image/img";
 import Production_Info from "./production_info";
 import "./product.css";
 import { useLocation } from "react-router-dom";
+import { getIntl } from "../../core/intl";
 
 const qiche_product = [
   { src: _img.product_1 },
@@ -16,12 +17,12 @@ const qiche_product = [
 ];
 
 const category = [
-  { name: "全部分类", img: qiche_product },
-  { name: "汽车电子", img: qiche_product },
-  { name: "工业终端", img: qiche_product },
-  { name: "民用智能", img: qiche_product },
-  { name: "智慧医疗", img: qiche_product },
-  { name: "物联网", img: qiche_product },
+  { name: "all_categories", img: qiche_product },
+  { name: "vehicle_electronics", img: qiche_product },
+  { name: "industrial_terminal", img: qiche_product },
+  { name: "civil_intelligence", img: qiche_product },
+  { name: "smart_healthcare", img: qiche_product },
+  { name: "internet_of_things", img: qiche_product },
 ];
 
 const { TabPane } = Tabs;
@@ -34,7 +35,7 @@ function Production(props) {
       onTabChange(server_id.key);
     }
   }, [location]);
-  const [tabKey, setTabKey] = useState("全部分类");
+  const [tabKey, setTabKey] = useState("all_categories");
   const onTabChange = (key) => {
     console.log("key: ", key);
     setTabKey(key);
@@ -66,7 +67,7 @@ function Production(props) {
                   }}
                   className={tabKey === p.name ? "tab_bar_select" : "tab_bar"}
                 >
-                  {p.name}
+                  {getIntl(p.name)}
                 </div>
               }
               key={p.name}

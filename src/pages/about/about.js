@@ -7,6 +7,7 @@ import Contact from "./contact_us";
 import Honor from "./honor";
 import _img from "../image/img";
 import "../production/product.css";
+import { getIntl } from "../../core/intl";
 
 const { TabPane } = Tabs;
 
@@ -40,7 +41,7 @@ function About() {
                 }}
                 className={tabKey === "0" ? "tab_bar_select" : "tab_bar"}
               >
-                公司简介
+                {getIntl("menu_about")}
               </div>
             }
             key="0"
@@ -59,7 +60,7 @@ function About() {
                 }}
                 className={tabKey === "1" ? "tab_bar_select" : "tab_bar"}
               >
-                联系我们
+                {getIntl("menu_contact")}
               </div>
             }
             key="1"
@@ -78,7 +79,7 @@ function About() {
                 }}
                 className={tabKey === "2" ? "tab_bar_select" : "tab_bar"}
               >
-                荣誉资质
+                {getIntl("honor")}
               </div>
             }
             key="2"

@@ -2,11 +2,14 @@ import React from "react";
 import { Image, Space } from "antd";
 import { useNavigate } from "react-router-dom";
 import logo from "../../img/xingshen.png";
+import { getIntl } from "../../core/intl";
+import { useSelector } from "react-redux";
 
 function FooterDs() {
+  const locale = useSelector((state) => state.localeStore.currentLocale);
   const navigate = useNavigate();
   return (
-    <div style={{ display: "flex", marginLeft: 50 }}>
+    <div style={{ display: "flex", padding: 20 }}>
       <img
         src={logo}
         className="img_shadow"
@@ -20,103 +23,123 @@ function FooterDs() {
                 className="foot_menu"
                 onClick={() => navigate("/factory/env")}
               >
-                工厂环境
+                {getIntl("sub_menu_factory")}
               </div>
               <div
                 className="foot_menu"
                 onClick={() => navigate("/factory/device")}
               >
-                设备类型
+                {getIntl("sub_menu_device")}
               </div>
             </Space>
             <Space direction={"vertical"} size={20}>
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "全部分类" } })
+                  navigate("/production", { state: { key: "all_categories" } })
                 }
               >
-                全部分类
+                {getIntl("all_categories")}
               </div>
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "汽车电子" } })
+                  navigate("/production", { state: { key: "vehicle_electronics" } })
                 }
               >
-                汽车电子
-              </div>
-            </Space>
-            <Space direction={"vertical"} size={20}>
-              <div
-                className="foot_menu"
-                onClick={() =>
-                  navigate("/production", { state: { key: "工业终端" } })
-                }
-              >
-                工业终端
-              </div>
-              <div
-                className="foot_menu"
-                onClick={() =>
-                  navigate("/production", { state: { key: "民用智能" } })
-                }
-              >
-                民用智能
+                {getIntl("vehicle_electronics")}
               </div>
             </Space>
             <Space direction={"vertical"} size={20}>
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "智慧医疗" } })
+                  navigate("/production", { state: { key: "industrial_terminal" } })
                 }
               >
-                智慧医疗
+                {getIntl("industrial_terminal")}
               </div>
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "物联网" } })
+                  navigate("/production", { state: { key: "civil_intelligence" } })
                 }
               >
-                物联网
+                {getIntl("civil_intelligence")}
+              </div>
+            </Space>
+            <Space direction={"vertical"} size={20}>
+              <div
+                className="foot_menu"
+                onClick={() =>
+                  navigate("/production", { state: { key: "smart_healthcare" } })
+                }
+              >
+                {getIntl("smart_healthcare")}
+              </div>
+              <div
+                className="foot_menu"
+                onClick={() =>
+                  navigate("/production", { state: { key: "internet_of_things" } })
+                }
+              >
+                {getIntl("internet_of_things")}
               </div>
             </Space>
             <Space direction={"vertical"} size={20}>
               <div className="foot_menu" onClick={() => navigate("/about")}>
-                公司简介
+                {getIntl("menu_about")}
               </div>
               <div
                 className="foot_menu"
                 onClick={() => navigate("/contact_us")}
               >
-                联系我们
+                {getIntl("menu_contact")}
+              </div>
+            </Space>
+            <Space direction={"vertical"} size={20}>
+              <div className="foot_menu" onClick={() => navigate("/business")}>
+                {getIntl("menu_business")}
+              </div>
+              <div
+                className="foot_menu"
+                onClick={() => navigate("/recruitment")}
+              >
+                {getIntl("menu_recruitment")}
               </div>
             </Space>
           </Space>
           <div
             style={{
-              display: "flex",
               height: 100,
               paddingTop: 20,
-              marginLeft: 100,
+              marginLeft: 50,
+              marginRight: 50,
             }}
           >
-            <div style={{ height: 100, marginLeft: 20, marginTop: 0 }}>
-              <div
-                className="font_shadow_3D"
-                style={{ color: "white", fontSize: 12 }}
-              >
-                全国咨询热线: 18069673763
-              </div>
-              <div
-                style={{ color: "white", marginTop: 10, fontSize: 12 }}
-                className="font_shadow_3D"
-              >
-                安徽省马鞍山市郑浦港新区和州大道蒲建标准化厂房1号楼
-              </div>
+            {/*<div style={{ height: 100, marginLeft: 20, marginTop: 0 }}>*/}
+            <div
+              className={locale === "zh-CN" && "font_shadow_3D"}
+              style={{
+                color: "white",
+                fontSize: 14,
+                fontWeight: locale === "zh-CN" ? 0 : "bold",
+              }}
+            >
+              {getIntl("support_hotline")}: 18069673763
             </div>
+            <div
+              style={{
+                color: "white",
+                marginTop: 10,
+                fontSize: 14,
+                fontWeight: "bold",
+              }}
+              className={locale === "zh-CN" && "font_shadow_3D"}
+            >
+              {getIntl("address")}
+            </div>
+            {/*</div>*/}
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Company from "../about/company";
 import _img from "../image/img";
 import { Tabs } from "antd";
 import Recruitment_info from "./recruitment_info";
+import { getIntl } from "../../core/intl";
 
 const { TabPane } = Tabs;
 function Recruitment() {
@@ -36,7 +37,7 @@ function Recruitment() {
                 }}
                 className={tabKey === "1" ? "tab_bar_select" : "tab_bar"}
               >
-                人才招聘
+                {getIntl("menu_recruitment")}
               </div>
             }
             key="1"

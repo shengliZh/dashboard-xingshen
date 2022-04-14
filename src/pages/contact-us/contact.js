@@ -3,6 +3,7 @@ import _img from "../image/img";
 import Company from "../about/company";
 import { Tabs } from "antd";
 import Contact_us from "../about/contact_us";
+import { getIntl } from "../../core/intl";
 
 const { TabPane } = Tabs;
 
@@ -37,7 +38,7 @@ function Contact() {
                 }}
                 className={tabKey === "1" ? "tab_bar_select" : "tab_bar"}
               >
-                联系我们
+                {getIntl("menu_contact")}
               </div>
             }
             key="1"

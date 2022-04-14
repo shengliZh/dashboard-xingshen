@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Image } from "antd";
 import { MoreOutlined } from "@ant-design/icons";
+import { getIntl } from "../../core/intl";
 
 function Production_Info(props) {
   const [info, setInfo] = useState({});
@@ -15,7 +16,9 @@ function Production_Info(props) {
             padding: 10,
           }}
         >
-          <strong style={{ fontSize: 20, color: "white" }}>{props.name}</strong>
+          <strong style={{ fontSize: 20, color: "white" }}>
+            {getIntl(props.name)}
+          </strong>
         </div>
       )}
       <div
@@ -48,7 +51,7 @@ function Production_Info(props) {
                   fontWeight: "200",
                 }}
               >
-                {p.name ?? "元器件"}
+                {getIntl("product_name")}
               </div>
               <div
                 style={{

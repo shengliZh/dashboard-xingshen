@@ -5,11 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import CustomRouter from "./route/custom-router";
 import history from "./route/my-history";
+import { Provider } from "react-redux";
+import store from "./redux/store/store";
 
 ReactDOM.render(
   <CustomRouter history={history}>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </CustomRouter>,
   document.getElementById("root")

@@ -5,6 +5,8 @@ import { devices } from "../../constant/constant";
 import Company from "../about/company";
 import _img from "../image/img";
 import "./factory.css";
+import { getIntl, getIntlHtml } from "../../core/intl";
+import { getHTML } from "react-intl-universal";
 
 const device1 = [devices[0], devices[1], devices[2]];
 const device2 = [devices[3], devices[4], devices[5]];
@@ -70,7 +72,9 @@ function Device() {
       <Company img={[_img.shebeijieshao]} />
       <div style={{ height: 30 }} />
       <div style={{ backgroundColor: "#1a338f", padding: 10 }}>
-        <strong style={{ fontSize: 24, color: "white" }}>设备展示</strong>
+        <strong style={{ fontSize: 24, color: "white" }}>
+          {getIntl("sub_menu_device")}
+        </strong>
       </div>
       <div style={{ display: "flex", marginTop: 20 }}>
         <div style={{ width: "10%" }} />
@@ -104,7 +108,7 @@ function Device() {
                           fontWeight: "200",
                         }}
                       >
-                        {p.name}
+                        {getIntl(p.name)}
                       </div>
                       <div
                         style={{
@@ -117,8 +121,8 @@ function Device() {
                           className="more_style"
                           onClick={() => {
                             setInfo({
-                              name: p.name,
-                              desc: p.desc,
+                              name: getIntl(p.name),
+                              desc: getIntlHtml(p.desc),
                               src: p.src,
                               param: p.param,
                             });

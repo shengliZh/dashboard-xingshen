@@ -5,10 +5,13 @@ import Map, { MapApiLoaderHOC } from "react-bmapgl/Map";
 import ZoomControl from "react-bmapgl/Control/ZoomControl";
 import Marker from "react-bmapgl/Overlay/Marker";
 import InfoWindow from "react-bmapgl/Overlay/InfoWindow";
+import { useSelector } from "react-redux";
+import { getIntl } from "../../core/intl";
 
 const { Step } = Steps;
 
 function Contact() {
+  const locale = useSelector((state) => state.localeStore.currentLocale);
   const [showPop, setShowPop] = useState(true);
   return (
     <div
@@ -29,7 +32,7 @@ function Contact() {
             marginLeft: 20,
           }}
         >
-          联系我们
+          {getIntl("menu_contact")}
         </div>
         <div
           style={{
@@ -50,29 +53,29 @@ function Contact() {
             marginLeft: 20,
           }}
         >
-          安徽兴申科技有限公司
+          {getIntl("company_name")}
         </div>
         <Steps direction="vertical" style={{ marginLeft: 20 }}>
           <Step
             icon={<HomeOutlined />}
-            title="地址"
+            title={getIntl("address_title")}
             status={"finish"}
-            description="安徽省马鞍山市郑浦港新区和州大道蒲建标准化厂房1号楼"
+            description={getIntl("address")}
           />
           <Step
-            title="电话"
+            title={getIntl("phone_title")}
             description="0555-2963088"
             status={"finish"}
             icon={<PhoneOutlined />}
           />
           <Step
-            title="邮箱"
+            title={getIntl("email_title")}
             description="guangrongchen@ttongjd.cn"
             status={"finish"}
             icon={<MailOutlined />}
           />
           <Step
-            title="手机"
+            title={getIntl("cell_phone_title")}
             description="18069673763"
             status={"finish"}
             icon={<PhoneOutlined />}
@@ -94,11 +97,11 @@ function Contact() {
           {showPop && (
             <InfoWindow
               position={new window.BMapGL.Point(118.352155, 31.624036)}
-              title={"安徽兴申科技有限公司"}
-              height={10}
+              title={getIntl("company_name")}
               onClickclose={(e) => {
                 setShowPop(false);
               }}
+              width={500}
             >
               <div style={{ color: "#1A338F" }}>
                 <div
@@ -107,10 +110,11 @@ function Contact() {
                     height: 1,
                     marginRight: 5,
                     marginBottom: 5,
+                    paddingRight: 20,
                   }}
                 />
-                <strong>地址： </strong>
-                安徽省马鞍山市郑浦港新区和州大道蒲建标准化厂房1号楼
+                <strong>{getIntl("address_title")}： </strong>
+                {getIntl("address")}
               </div>
             </InfoWindow>
           )}

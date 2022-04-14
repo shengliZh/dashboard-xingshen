@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Image } from "antd";
 import { useNavigate } from "react-router-dom";
 import "./slider.css";
+import { getIntl } from "../../../core/intl";
+import { useSelector } from "react-redux";
 function Slider(props) {
   const navigate = useNavigate();
   useEffect(() => {
@@ -79,7 +81,7 @@ function Slider(props) {
                       marginTop: 10,
                     }}
                   >
-                    {p.name}
+                    {getIntl(p.name)}
                   </div>
                 </div>
               </li>

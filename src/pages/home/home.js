@@ -10,6 +10,8 @@ import "./home.css";
 import Factory_env from "./factory_env";
 import { Tabs } from "antd";
 import Production_demo from "./production_demo";
+import { getIntl } from "../../core/intl";
+import { useSelector } from "react-redux";
 
 const { TabPane } = Tabs;
 
@@ -41,10 +43,11 @@ const zhihui_product = [
 ];
 
 const category = [
-  { name: "汽车电子", img: qiche_product },
-  { name: "工业终端", img: qiche_product },
-  { name: "民用智能", img: qiche_product },
-  { name: "智慧医疗", img: zhihui_product },
+  { name: "vehicle_electronics", img: qiche_product },
+  { name: "industrial_terminal", img: qiche_product },
+  { name: "civil_intelligence", img: qiche_product },
+  { name: "smart_healthcare", img: qiche_product },
+  { name: "internet_of_things", img: zhihui_product },
 ];
 
 function Home() {
@@ -63,7 +66,7 @@ function Home() {
             color: "#fff",
           }}
         >
-          关于安徽兴申
+          {getIntl("about_company_title")}
         </div>
         <div style={{ display: "flex" }}>
           <div style={{ flex: 0.43 }} />
@@ -114,7 +117,7 @@ function Home() {
               {category.map((p, index) => {
                 return (
                   <TabPane
-                    tab={p.name}
+                    tab={getIntl(p.name)}
                     key={`${index}`}
                     style={{ padding: 30 }}
                   >
@@ -155,7 +158,7 @@ function Home() {
             }}
           >
             <div className="title" style={{ flex: "0.98" }}>
-              工厂环境
+              {getIntl("sub_menu_factory")}
             </div>
             <div
               className="more_style"
@@ -182,7 +185,7 @@ function Home() {
         >
           <div style={{ backgroundColor: "#fafafa", display: "flex" }}>
             <div className="title" style={{ flex: "0.98" }}>
-              设备展示
+              {getIntl("sub_menu_device")}
             </div>
             <div
               className="more_style"

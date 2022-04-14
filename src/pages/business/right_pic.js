@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "antd";
 import _img from "../image/img";
+import { getIntl } from "../../core/intl";
 
 function Right_pic(props) {
   return (
@@ -20,7 +21,7 @@ function Right_pic(props) {
             className="text_font1"
             style={{ textAlign: "left", marginTop: 40, marginLeft: 30 }}
           >
-            {props.business.title}
+            {getIntl(props.business.title)}
           </span>
           <div
             style={{
@@ -46,7 +47,7 @@ function Right_pic(props) {
             }}
             className="bg"
           >
-            {props.business.content}
+            {getIntl(props.business.content)}
           </div>
           <div
             style={{

@@ -3,6 +3,7 @@ import { Space, Image } from "antd";
 import _img from "../image/img";
 import Company from "../about/company";
 import "./factory.css";
+import { getIntl } from "../../core/intl";
 
 function Env() {
   return (
@@ -10,7 +11,7 @@ function Env() {
       <Company img={[_img.chanpinanli]} />
       <div style={{ height: 30 }} />
       <div style={{ backgroundColor: "#f0fafa", padding: 10 }}>
-        <strong style={{ fontSize: 24 }}>工厂环境</strong>
+        <strong style={{ fontSize: 24 }}>{getIntl("sub_menu_factory")}</strong>
       </div>
       <div style={{ display: "flex" }}>
         <div style={{ width: "10%" }} />
@@ -25,7 +26,9 @@ function Env() {
               padding: 10,
             }}
           >
-            <strong style={{ fontSize: 20, color: "white" }}>前台</strong>
+            <strong style={{ fontSize: 20, color: "white" }}>
+              {getIntl("reception")}
+            </strong>
           </div>
           <Space size={100} style={{ marginBottom: 20 }}>
             <Image
@@ -56,7 +59,9 @@ function Env() {
               padding: 10,
             }}
           >
-            <strong style={{ fontSize: 20, color: "white" }}>办公室</strong>
+            <strong style={{ fontSize: 20, color: "white" }}>
+              {getIntl("office")}
+            </strong>
           </div>
           <Space size={50} style={{ marginBottom: 20 }}>
             <Image
@@ -93,7 +98,9 @@ function Env() {
               padding: 10,
             }}
           >
-            <strong style={{ fontSize: 20, color: "white" }}>SMT车间</strong>
+            <strong style={{ fontSize: 20, color: "white" }}>
+              {getIntl("smt_work_shop")}
+            </strong>
           </div>
           <Space size={50} style={{ marginBottom: 20 }}>
             <Image
@@ -136,7 +143,9 @@ function Env() {
               padding: 10,
             }}
           >
-            <strong style={{ fontSize: 20, color: "white" }}>产线</strong>
+            <strong style={{ fontSize: 20, color: "white" }}>
+              {getIntl("production_line")}
+            </strong>
           </div>
           <Space size={200} style={{ marginBottom: 20 }}>
             <Image
