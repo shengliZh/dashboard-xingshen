@@ -38,6 +38,7 @@ function Header(props) {
             paddingTop: 20,
             marginTop: 0,
             alignSelf: "center",
+            marginLeft: 20
           }}
         />
         <strong
@@ -176,6 +177,7 @@ function Header(props) {
             right: 0,
             height: 100,
             paddingTop: 10,
+            marginLeft: 20,
           }}
         >
           <div style={{ marginRight: 20, marginTop: 30 }}>
@@ -207,7 +209,7 @@ function Header(props) {
           {/*</div>*/}
         </div>
       </div>
-      <div style={{ width: "100%", height: 1, backgroundColor: "#1a338f" }} />
+      <div style={{ height: 3, backgroundColor: "#1a338f" }} />
     </div>
   );
 }

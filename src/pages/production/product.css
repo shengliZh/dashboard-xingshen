@@ -15,13 +15,16 @@
   /*-webkit-box-shadow: #1a338f 0px 10px 10px;*/
   /*-moz-box-shadow: #1a338f 0px 10px 10px;*/
   /*box-shadow: #1a338f 0px 10px 10px;*/
+  box-shadow: inset #fffb8f 10px 10px 10px;
 }
 
 .tab_bar_select {
   color: #fff;
   background-color: #1a338f;
   border-radius: 7px;
+  border: 1px solid #1a338f;
   /*-webkit-box-shadow: #1a338f 0px 10px 10px;*/
   /*-moz-box-shadow: #1a338f 0px 10px 10px;*/
   /*box-shadow: #1a338f 0px 10px 10px;*/
+  box-shadow: inset #fffb8f 10px 10px 10px;
 }
