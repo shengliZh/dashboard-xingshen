@@ -26,14 +26,14 @@ function Production_Info(props) {
           marginTop: 0,
           padding: 20,
           display: "flex",
-          justifyContent: "center",
+          // justifyContent: "center",
         }}
       >
         {props.img.map((p) => {
           return (
             <div
               style={{
-                textAlign: "center",
+                // textAlign: "center",
                 width: "26%",
                 margin: 20,
               }}
@@ -45,30 +45,30 @@ function Production_Info(props) {
                 style={{ height: 300, marginTop: 20, marginBottom: 20 }}
                 preview={false}
               />
-              <div
-                style={{
-                  fontSize: 16,
-                  fontWeight: "200",
-                }}
-              >
-                {getIntl("product_name")}
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  marginBottom: 10,
-                }}
-              >
-                <div className="title" style={{ flex: "0.98" }} />
-                <div
-                  className="more_style"
-                  onClick={() => {}}
-                  style={{ margin: 10 }}
-                >
-                  <MoreOutlined className="more_icon" />
-                  MORE
-                </div>
-              </div>
+              {/*<div*/}
+              {/*  style={{*/}
+              {/*    fontSize: 16,*/}
+              {/*    fontWeight: "200",*/}
+              {/*  }}*/}
+              {/*>*/}
+              {/*  {getIntl("product_name")}*/}
+              {/*</div>*/}
+              {/*<div*/}
+              {/*  style={{*/}
+              {/*    display: "flex",*/}
+              {/*    marginBottom: 10,*/}
+              {/*  }}*/}
+              {/*>*/}
+              {/*  <div className="title" style={{ flex: "0.98" }} />*/}
+              {/*  <div*/}
+              {/*    className="more_style"*/}
+              {/*    onClick={() => {}}*/}
+              {/*    style={{ margin: 10 }}*/}
+              {/*  >*/}
+              {/*    <MoreOutlined className="more_icon" />*/}
+              {/*    MORE*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
           );
         })}

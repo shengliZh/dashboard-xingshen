@@ -6,6 +6,7 @@ import Production_Info from "./production_info";
 import "./product.css";
 import { useLocation } from "react-router-dom";
 import { getIntl } from "../../core/intl";
+import _ from "lodash";
 
 const qiche_product = [
   { src: _img.product_1 },
@@ -16,10 +17,17 @@ const qiche_product = [
   { src: _img.product_6 },
 ];
 
+const gongye_product = [
+  { src: _img.gongyezhongquan_1 },
+  { src: _img.gongyezhongquan_2 },
+  { src: _img.gongyezhongquan_3 },
+  { src: _img.gongyezhongquan_4 },
+];
+
 const category = [
   { name: "all_categories", img: qiche_product },
   { name: "vehicle_electronics", img: qiche_product },
-  { name: "industrial_terminal", img: qiche_product },
+  { name: "industrial_terminal", img: gongye_product },
   { name: "civil_intelligence", img: qiche_product },
   { name: "smart_healthcare", img: qiche_product },
   { name: "internet_of_things", img: qiche_product },
@@ -37,7 +45,6 @@ function Production(props) {
   }, [location]);
   const [tabKey, setTabKey] = useState("all_categories");
   const onTabChange = (key) => {
-    console.log("key: ", key);
     setTabKey(key);
   };
   return (
@@ -73,11 +80,15 @@ function Production(props) {
               key={p.name}
             >
               <div>
-                <Production_Info
-                  name={tabKey}
-                  img={[p.img[0], p.img[1], p.img[2]]}
-                />
-                <Production_Info img={[p.img[3], p.img[4], p.img[5]]} />
+                {_.chunk(p.img, 3).map((t, l) => {
+                  return (
+                    <Production_Info
+                      name={l === 0 ? tabKey : undefined}
+                      img={t}
+                      key={`${l}`}
+                    />
+                  );
+                })}
               </div>
             </TabPane>
           );

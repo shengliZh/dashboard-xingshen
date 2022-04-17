@@ -52,31 +52,12 @@ function Header(props) {
         <Menu
           theme={"light"}
           mode={"horizontal"}
-          style={{
-            height: 70,
-            marginTop: 30,
-            marginLeft: 30,
-            backgroundColor: "#ebf6fb",
-            borderTop: "1px solid #1a338f",
-            borderLeft: "1px solid #1a338f",
-            borderRight: "1px solid #1a338f",
-          }}
+          className="menu_style"
           selectedKeys={[current]}
           onClick={(e) => navigate(e.key)}
         >
           <Menu.Item key={"/"} style={{ padding: 0, margin: 0 }}>
-            <div
-              style={{
-                padding: 20,
-                paddingTop: 0,
-                paddingBottom: 10,
-                textAlign: "center",
-                height: 69,
-                fontSize: 14,
-                borderBottomColor: "#1a338f",
-              }}
-              className={current === "/" ? "sub_item_select" : "menu_item"}
-            >
+            <div className={current === "/" ? "sub_item_select" : "menu_item"}>
               {getIntl("menu_home")}
             </div>
           </Menu.Item>
@@ -84,12 +65,6 @@ function Header(props) {
             key={"/factory"}
             title={
               <div
-                style={{
-                  paddingLeft: 10,
-                  paddingRight: 10,
-                  height: 69,
-                  fontSize: 14,
-                }}
                 className={
                   current.includes("/factory") ? "sub_item_select" : "menu_item"
                 }
@@ -141,13 +116,6 @@ function Header(props) {
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
           >
             <div
-              style={{
-                padding: 10,
-                paddingTop: 0,
-                textAlign: "center",
-                height: 69,
-                fontSize: 14,
-              }}
               className={
                 current === "/production" ? "sub_item_select" : "menu_item"
               }
@@ -160,13 +128,6 @@ function Header(props) {
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
           >
             <div
-              style={{
-                padding: 10,
-                paddingTop: 0,
-                textAlign: "center",
-                height: 69,
-                fontSize: 14,
-              }}
               className={
                 current === "/business" ? "sub_item_select" : "menu_item"
               }
@@ -179,13 +140,6 @@ function Header(props) {
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
           >
             <div
-              style={{
-                padding: 10,
-                paddingTop: 0,
-                textAlign: "center",
-                height: 69,
-                fontSize: 14,
-              }}
               className={current === "/about" ? "sub_item_select" : "menu_item"}
             >
               {getIntl("menu_about")}
@@ -196,13 +150,6 @@ function Header(props) {
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
           >
             <div
-              style={{
-                padding: 10,
-                paddingTop: 0,
-                textAlign: "center",
-                height: 69,
-                fontSize: 14,
-              }}
               className={
                 current === "/recruitment" ? "sub_item_select" : "menu_item"
               }
@@ -215,12 +162,6 @@ function Header(props) {
             style={{ padding: 0, margin: 0, marginLeft: 10 }}
           >
             <div
-              style={{
-                padding: 10,
-                paddingTop: 0,
-                textAlign: "center",
-                height: 69,
-              }}
               className={
                 current === "/contact_us" ? "sub_item_select" : "menu_item"
               }
@@ -232,9 +173,7 @@ function Header(props) {
         <div
           style={{
             display: "flex",
-            position: "absolute",
             right: 0,
-            marginRight: "5%",
             height: 100,
             paddingTop: 10,
           }}
@@ -250,22 +189,22 @@ function Header(props) {
               <Option value={"en-US"}>English</Option>
             </Select>
           </div>
-          <Image
-            src={_img.lianxifangshi}
-            preview={false}
-            className="img_shadow"
-          />
-          <div style={{ height: 100, marginLeft: 20 }}>
-            <div className="font_shadow" style={{ fontSize: 16 }}>
-              {getIntl("support_hotline")}
-            </div>
-            <div
-              className="font_shadow_3D"
-              style={{ marginTop: -30, fontSize: 16 }}
-            >
-              18069673763
-            </div>
-          </div>
+          {/*<Image*/}
+          {/*  src={_img.lianxifangshi}*/}
+          {/*  preview={false}*/}
+          {/*  className="img_shadow"*/}
+          {/*/>*/}
+          {/*<div style={{ height: 100, marginLeft: 20 }}>*/}
+          {/*  <div className="font_shadow" style={{ fontSize: 16 }}>*/}
+          {/*    {getIntl("support_hotline")}*/}
+          {/*  </div>*/}
+          {/*  <div*/}
+          {/*    className="font_shadow_3D"*/}
+          {/*    style={{ marginTop: -30, fontSize: 16 }}*/}
+          {/*  >*/}
+          {/*    18069673763*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       </div>
       <div style={{ width: "100%", height: 1, backgroundColor: "#1a338f" }} />

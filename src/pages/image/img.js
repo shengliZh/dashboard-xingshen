@@ -57,13 +57,19 @@ const shebeijieshao = require("../../img/shebeijieshao.png");
 const yewu = require("../../img/yewu.jpeg");
 const yewufanwei = require("../../img/yewufanwei.jpeg");
 
-//产品
+//产品->汽车电子
 const product_1 = require("../../img/product_1.jpg");
 const product_2 = require("../../img/product_2.jpg");
 const product_3 = require("../../img/product_3.jpg");
 const product_4 = require("../../img/product_4.jpg");
 const product_5 = require("../../img/product_5.jpg");
 const product_6 = require("../../img/product_6.jpg");
+
+//产品->工业终端
+const gongyezhongquan_1 = require("../../img/gongyezhongduan1.jpeg");
+const gongyezhongquan_2 = require("../../img/gongyezhongduan2.jpeg");
+const gongyezhongquan_3 = require("../../img/gongyezhongduan3.png");
+const gongyezhongquan_4 = require("../../img/gongyezhongduan4.png");
 
 //证书
 const zhengshu1 = require("../../img/renzhengzhengshu1.jpeg");
@@ -153,4 +159,8 @@ export default {
   PCBA_zhijian,
   PCBA_daigong,
   company_yy,
+  gongyezhongquan_3,
+  gongyezhongquan_4,
+  gongyezhongquan_2,
+  gongyezhongquan_1,
 };
