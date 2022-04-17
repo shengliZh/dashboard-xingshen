@@ -38,7 +38,7 @@ function Header(props) {
             paddingTop: 20,
             marginTop: 0,
             alignSelf: "center",
-            marginLeft: 20
+            marginLeft: 20,
           }}
         />
         <strong
@@ -58,7 +58,10 @@ function Header(props) {
           onClick={(e) => navigate(e.key)}
         >
           <Menu.Item key={"/"} style={{ padding: 0, margin: 0 }}>
-            <div className={current === "/" ? "sub_item_select" : "menu_item"}>
+            <div
+              className={current === "/" ? "sub_item_select" : "menu_item"}
+              style={{ paddingLeft: 24, paddingRight: 24 }}
+            >
               {getIntl("menu_home")}
             </div>
           </Menu.Item>
