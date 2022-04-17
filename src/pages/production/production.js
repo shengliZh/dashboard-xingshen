@@ -53,7 +53,7 @@ function Production(props) {
         tabBarStyle={{ width: 200 }}
         onChange={onTabChange}
       >
-        {category.map((p) => {
+        {category.map((p, index) => {
           return (
             <TabPane
               tab={
@@ -61,7 +61,7 @@ function Production(props) {
                   style={{
                     width: 200,
                     marginLeft: -15,
-                    marginTop: -10,
+                    marginTop: index === 0 ? -7 : -20,
                     marginBottom: -10,
                     padding: 20,
                   }}
