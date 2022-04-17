@@ -17,8 +17,8 @@ function FooterDs() {
       />
       <div style={{ marginLeft: 50 }}>
         <div style={{ display: "flex" }}>
-          <Space size={20}>
-            <Space direction={"vertical"} size={20}>
+          <Space size={10}>
+            <Space direction={"vertical"} size={5}>
               <div
                 className="foot_menu"
                 onClick={() => navigate("/factory/env")}
@@ -32,7 +32,7 @@ function FooterDs() {
                 {getIntl("sub_menu_device")}
               </div>
             </Space>
-            <Space direction={"vertical"} size={20}>
+            <Space direction={"vertical"} size={5}>
               <div
                 className="foot_menu"
                 onClick={() =>
@@ -44,17 +44,21 @@ function FooterDs() {
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "vehicle_electronics" } })
+                  navigate("/production", {
+                    state: { key: "vehicle_electronics" },
+                  })
                 }
               >
                 {getIntl("vehicle_electronics")}
               </div>
             </Space>
-            <Space direction={"vertical"} size={20}>
+            <Space direction={"vertical"} size={5}>
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "industrial_terminal" } })
+                  navigate("/production", {
+                    state: { key: "industrial_terminal" },
+                  })
                 }
               >
                 {getIntl("industrial_terminal")}
@@ -62,17 +66,21 @@ function FooterDs() {
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "civil_intelligence" } })
+                  navigate("/production", {
+                    state: { key: "civil_intelligence" },
+                  })
                 }
               >
                 {getIntl("civil_intelligence")}
               </div>
             </Space>
-            <Space direction={"vertical"} size={20}>
+            <Space direction={"vertical"} size={5}>
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "smart_healthcare" } })
+                  navigate("/production", {
+                    state: { key: "smart_healthcare" },
+                  })
                 }
               >
                 {getIntl("smart_healthcare")}
@@ -80,13 +88,15 @@ function FooterDs() {
               <div
                 className="foot_menu"
                 onClick={() =>
-                  navigate("/production", { state: { key: "internet_of_things" } })
+                  navigate("/production", {
+                    state: { key: "internet_of_things" },
+                  })
                 }
               >
                 {getIntl("internet_of_things")}
               </div>
             </Space>
-            <Space direction={"vertical"} size={20}>
+            <Space direction={"vertical"} size={5}>
               <div className="foot_menu" onClick={() => navigate("/about")}>
                 {getIntl("menu_about")}
               </div>
@@ -97,7 +107,7 @@ function FooterDs() {
                 {getIntl("menu_contact")}
               </div>
             </Space>
-            <Space direction={"vertical"} size={20}>
+            <Space direction={"vertical"} size={5}>
               <div className="foot_menu" onClick={() => navigate("/business")}>
                 {getIntl("menu_business")}
               </div>
@@ -119,7 +129,7 @@ function FooterDs() {
           >
             {/*<div style={{ height: 100, marginLeft: 20, marginTop: 0 }}>*/}
             <div
-              className={locale === "zh-CN" && "font_shadow_3D"}
+              // className={locale === "zh-CN" && "font_shadow_3D"}
               style={{
                 color: "white",
                 fontSize: 14,
@@ -131,11 +141,11 @@ function FooterDs() {
             <div
               style={{
                 color: "white",
-                marginTop: 10,
+                marginTop: 5,
                 fontSize: 14,
                 fontWeight: "bold",
               }}
-              className={locale === "zh-CN" && "font_shadow_3D"}
+              // className={locale === "zh-CN" && "font_shadow_3D"}
             >
               {getIntl("address")}
             </div>
