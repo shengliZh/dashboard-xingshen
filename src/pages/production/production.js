@@ -8,6 +8,15 @@ import { useLocation } from "react-router-dom";
 import { getIntl } from "../../core/intl";
 import _ from "lodash";
 
+const all_category = [
+  { src: _img.product_1 },
+  { src: _img.gongyezhongquan_1 },
+  { src: _img.chanpin_1 },
+  { src: _img.chanpin_6 },
+  { src: _img.chanpin_7 },
+  { src: _img.product_5 },
+];
+
 const qiche_product = [
   { src: _img.product_1 },
   { src: _img.product_2 },
@@ -29,18 +38,21 @@ const minyong_product = [
   { src: _img.chanpin_2 },
   { src: _img.chanpin_3 },
   { src: _img.chanpin_4 },
+];
+
+const wulianwang_product = [
   { src: _img.chanpin_5 },
   { src: _img.chanpin_6 },
   { src: _img.chanpin_7 },
 ];
 
 const category = [
-  { name: "all_categories", img: qiche_product },
+  { name: "all_categories", img: all_category },
   { name: "vehicle_electronics", img: qiche_product },
   { name: "industrial_terminal", img: gongye_product },
   { name: "civil_intelligence", img: minyong_product },
   { name: "smart_healthcare", img: qiche_product },
-  { name: "internet_of_things", img: qiche_product },
+  { name: "internet_of_things", img: wulianwang_product },
 ];
 
 const { TabPane } = Tabs;
