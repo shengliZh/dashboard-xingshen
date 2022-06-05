@@ -33,6 +33,37 @@ const qiche_product = [
   { src: _img.product_6 },
 ];
 
+const gongye_product = [
+  { src: _img.gongyezhongquan_1 },
+  { src: _img.gongyezhongquan_2 },
+  { src: _img.gongyezhongquan_3 },
+  { src: _img.gongyezhongquan_4 },
+  { src: _img.gongyezhongquan_1 },
+  { src: _img.gongyezhongquan_2 },
+  { src: _img.gongyezhongquan_3 },
+  { src: _img.gongyezhongquan_4 },
+];
+
+const minyong_product = [
+  { src: _img.chanpin_1 },
+  { src: _img.chanpin_2 },
+  { src: _img.chanpin_3 },
+  { src: _img.chanpin_4 },
+  { src: _img.chanpin_1 },
+  { src: _img.chanpin_2 },
+  { src: _img.chanpin_3 },
+  { src: _img.chanpin_4 },
+];
+
+const wulianwang_product = [
+  { src: _img.chanpin_5 },
+  { src: _img.chanpin_6 },
+  { src: _img.chanpin_7 },
+  { src: _img.chanpin_5 },
+  { src: _img.chanpin_6 },
+  { src: _img.chanpin_7 },
+];
+
 const zhihui_product = [
   { src: _img.SMT_chejian },
   { src: _img.SMT_chejian_2 },
@@ -44,10 +75,10 @@ const zhihui_product = [
 
 const category = [
   { name: "vehicle_electronics", img: qiche_product },
-  { name: "industrial_terminal", img: qiche_product },
-  { name: "civil_intelligence", img: qiche_product },
+  { name: "industrial_terminal", img: gongye_product },
+  { name: "civil_intelligence", img: minyong_product },
   { name: "smart_healthcare", img: qiche_product },
-  { name: "internet_of_things", img: zhihui_product },
+  { name: "internet_of_things", img: wulianwang_product },
 ];
 
 function Home() {
