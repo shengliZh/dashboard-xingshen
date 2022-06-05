@@ -71,6 +71,15 @@ const gongyezhongquan_2 = require("../../img/gongyezhongduan2.jpeg");
 const gongyezhongquan_3 = require("../../img/gongyezhongduan3.png");
 const gongyezhongquan_4 = require("../../img/gongyezhongduan4.png");
 
+//产品->民用智能
+const chanpin_1 = require("../../img/chanpin1.jpeg");
+const chanpin_2 = require("../../img/chanpin2.jpeg");
+const chanpin_3 = require("../../img/chanpin3.jpeg");
+const chanpin_4 = require("../../img/chanpin4.jpeg");
+const chanpin_5 = require("../../img/chanpin5.jpeg");
+const chanpin_6 = require("../../img/chanpin6.jpeg");
+const chanpin_7 = require("../../img/chanpin7.jpeg");
+
 //证书
 const zhengshu1 = require("../../img/renzhengzhengshu1.jpeg");
 const zhengshu2 = require("../../img/renzhengzhengshu2.jpeg");
@@ -163,4 +172,11 @@ export default {
   gongyezhongquan_4,
   gongyezhongquan_2,
   gongyezhongquan_1,
+  chanpin_1,
+  chanpin_2,
+  chanpin_3,
+  chanpin_4,
+  chanpin_5,
+  chanpin_6,
+  chanpin_7,
 };

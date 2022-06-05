@@ -24,11 +24,21 @@ const gongye_product = [
   { src: _img.gongyezhongquan_4 },
 ];
 
+const minyong_product = [
+  { src: _img.chanpin_1 },
+  { src: _img.chanpin_2 },
+  { src: _img.chanpin_3 },
+  { src: _img.chanpin_4 },
+  { src: _img.chanpin_5 },
+  { src: _img.chanpin_6 },
+  { src: _img.chanpin_7 },
+];
+
 const category = [
   { name: "all_categories", img: qiche_product },
   { name: "vehicle_electronics", img: qiche_product },
   { name: "industrial_terminal", img: gongye_product },
-  { name: "civil_intelligence", img: qiche_product },
+  { name: "civil_intelligence", img: minyong_product },
   { name: "smart_healthcare", img: qiche_product },
   { name: "internet_of_things", img: qiche_product },
 ];
