@@ -44,6 +44,8 @@ const wulianwang_product = [
   { src: _img.chanpin_5 },
   { src: _img.chanpin_6 },
   { src: _img.chanpin_7 },
+  { src: _img.chanpin_8 },
+  { src: _img.chanpin_9 },
 ];
 
 const category = [

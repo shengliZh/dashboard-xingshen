@@ -44,6 +44,11 @@ const SMT_chejian_4 = require("../../img/SMT_chejian_4.jpg");
 //产线
 const chanxian = require("../../img/chanxian.jpg");
 const chanxianzijian = require("../../img/chanxianzijian.jpg");
+const chanxian_1 = require("../../img/chanxian_1.jpg");
+const chanxian_2 = require("../../img/chanxian_2.jpg");
+const chanxian_3 = require("../../img/chanxian_3.jpg");
+const chanxian_4 = require("../../img/chanxian_4.jpg");
+const chanxian_5 = require("../../img/chanxian_5.jpg");
 //公司
 const shouye = require("../../img/home_page.jpeg");
 const zaixianliulan = require("../../img/zaixianliuyan.jpeg");
@@ -79,6 +84,8 @@ const chanpin_4 = require("../../img/chanpin4.jpeg");
 const chanpin_5 = require("../../img/chanpin5.jpeg");
 const chanpin_6 = require("../../img/chanpin6.jpeg");
 const chanpin_7 = require("../../img/chanpin7.jpeg");
+const chanpin_8 = require("../../img/chanpin8.png");
+const chanpin_9 = require("../../img/chanpin9.jpg");
 
 //证书
 const zhengshu1 = require("../../img/renzhengzhengshu1.jpeg");
@@ -179,4 +186,11 @@ export default {
   chanpin_5,
   chanpin_6,
   chanpin_7,
+  chanpin_8,
+  chanpin_9,
+  chanxian_1,
+  chanxian_2,
+  chanxian_3,
+  chanxian_4,
+  chanxian_5,
 };

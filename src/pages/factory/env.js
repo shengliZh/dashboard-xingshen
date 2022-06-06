@@ -147,17 +147,55 @@ function Env() {
               {getIntl("production_line")}
             </strong>
           </div>
-          <Space size={200} style={{ marginBottom: 20 }}>
+          <Space
+            size={50}
+            style={{ marginBottom: 20, marginLeft: 20, marginRight: 20 }}
+          >
             <Image
               src={_img.chanxian}
               preview={false}
-              style={{ width: 380 }}
+              style={{ height: 380 }}
               className="device_bg"
             />
             <Image
               src={_img.chanxianzijian}
               preview={false}
-              style={{ width: 380 }}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+            <Image
+              src={_img.chanxian_1}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+            <Image
+              src={_img.chanxian_2}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+          </Space>
+          <Space
+            size={50}
+            style={{ marginBottom: 20, marginLeft: 20, marginRight: 20 }}
+          >
+            <Image
+              src={_img.chanxian_3}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+            <Image
+              src={_img.chanxian_4}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+            <Image
+              src={_img.chanxian_5}
+              preview={false}
+              style={{ height: 380 }}
               className="device_bg"
             />
           </Space>
