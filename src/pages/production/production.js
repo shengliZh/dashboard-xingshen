@@ -38,6 +38,8 @@ const minyong_product = [
   { src: _img.chanpin_2 },
   { src: _img.chanpin_3 },
   { src: _img.chanpin_4 },
+  { src: _img.chanpin_minyongzhineng_1 },
+  { src: _img.chanpin_minyongzhineng_2 },
 ];
 
 const wulianwang_product = [

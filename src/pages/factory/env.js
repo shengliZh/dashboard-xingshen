@@ -102,7 +102,10 @@ function Env() {
               {getIntl("smt_work_shop")}
             </strong>
           </div>
-          <Space size={50} style={{ marginBottom: 20 }}>
+          <Space
+            size={50}
+            style={{ marginBottom: 20, marginLeft: 20, marginRight: 20 }}
+          >
             <Image
               src={_img.SMT_chejian}
               preview={false}
@@ -123,6 +126,30 @@ function Env() {
             />
             <Image
               src={_img.SMT_chejian_4}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+          </Space>
+
+          <Space
+            size={50}
+            style={{ marginBottom: 20, marginLeft: 20, marginRight: 20 }}
+          >
+            <Image
+              src={_img.chanxian_1}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+            <Image
+              src={_img.SMT_chanxian_1}
+              preview={false}
+              style={{ height: 380 }}
+              className="device_bg"
+            />
+            <Image
+              src={_img.SMT_chanxian_1}
               preview={false}
               style={{ height: 380 }}
               className="device_bg"
@@ -164,7 +191,7 @@ function Env() {
               className="device_bg"
             />
             <Image
-              src={_img.chanxian_1}
+              src={_img.chanxian_5}
               preview={false}
               style={{ height: 380 }}
               className="device_bg"
@@ -188,12 +215,6 @@ function Env() {
             />
             <Image
               src={_img.chanxian_4}
-              preview={false}
-              style={{ height: 380 }}
-              className="device_bg"
-            />
-            <Image
-              src={_img.chanxian_5}
               preview={false}
               style={{ height: 380 }}
               className="device_bg"

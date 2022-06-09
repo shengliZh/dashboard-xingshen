@@ -11,12 +11,18 @@ import Factory_env from "./factory_env";
 import { Tabs } from "antd";
 import Production_demo from "./production_demo";
 import { getIntl } from "../../core/intl";
-import { useSelector } from "react-redux";
 
 const { TabPane } = Tabs;
 
 const factory_env = [
+  _img.SMT_chanxian_1,
+  _img.SMT_chanxian_2,
   _img.SMT_chejian,
+  _img.chanxian_1,
+  _img.chanxian_2,
+  _img.chanxian_3,
+  _img.chanxian_4,
+  _img.chanxian_5,
   _img.SMT_chejian_2,
   _img.SMT_chejian_3,
   _img.SMT_chejian_4,
@@ -49,19 +55,16 @@ const minyong_product = [
   { src: _img.chanpin_2 },
   { src: _img.chanpin_3 },
   { src: _img.chanpin_4 },
-  { src: _img.chanpin_1 },
-  { src: _img.chanpin_2 },
-  { src: _img.chanpin_3 },
-  { src: _img.chanpin_4 },
+  { src: _img.chanpin_minyongzhineng_1 },
+  { src: _img.chanpin_minyongzhineng_2 },
 ];
 
 const wulianwang_product = [
   { src: _img.chanpin_5 },
   { src: _img.chanpin_6 },
   { src: _img.chanpin_7 },
-  { src: _img.chanpin_5 },
-  { src: _img.chanpin_6 },
-  { src: _img.chanpin_7 },
+  { src: _img.chanpin_8 },
+  { src: _img.chanpin_9 },
 ];
 
 const zhihui_product = [
