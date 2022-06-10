@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "antd/dist/antd.css";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Layout, ConfigProvider } from "antd";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import About from "./pages/about/about";
 import Home from "./pages/home/home";
 import Production from "./pages/production/production";

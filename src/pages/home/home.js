@@ -1,15 +1,15 @@
 import React from "react";
 import Company from "../about/company";
 import { useNavigate } from "react-router-dom";
-import Introduction from "../about/introduction_home";
+import Introduction from "../about/introductionHome";
 import Slider from "../tools/slider/slider";
 import { devices } from "../../constant/constant";
 import { MoreOutlined } from "@ant-design/icons";
 import _img from "../image/img";
 import "./home.css";
-import Factory_env from "./factory_env";
+import FactoryEnv from "./factoryEnv";
 import { Tabs } from "antd";
-import Production_demo from "./production_demo";
+import ProductionDemo from "./productionDemo";
 import { getIntl } from "../../core/intl";
 
 const { TabPane } = Tabs;
@@ -70,15 +70,6 @@ const wulianwang_product = [
   { src: _img.chanpin_7 },
   { src: _img.chanpin_8 },
   { src: _img.chanpin_9 },
-];
-
-const zhihui_product = [
-  { src: _img.SMT_chejian },
-  { src: _img.SMT_chejian_2 },
-  { src: _img.SMT_chejian_3 },
-  { src: _img.SMT_chejian_4 },
-  { src: _img.chanxian },
-  { src: _img.chanxianzijian },
 ];
 
 const category = [
@@ -160,7 +151,7 @@ function Home() {
                     key={`${index}`}
                     style={{ padding: 30 }}
                   >
-                    <Production_demo img={p.img.map((p) => p.src)} />
+                    <ProductionDemo img={p.img.map((p) => p.src)} />
                   </TabPane>
                 );
               })}
@@ -209,7 +200,7 @@ function Home() {
               MORE
             </div>
           </div>
-          <Factory_env img={factory_env} />
+          <FactoryEnv img={factory_env} />
         </div>
       </div>
       <div style={{ height: "100px" }} />

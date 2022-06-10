@@ -13,7 +13,7 @@ const introduction = [
   _img.office_bar,
 ];
 
-function Introduction_Home() {
+function IntroductionHome() {
   const settings = {
     dots: true,
     infinite: true,
@@ -67,4 +67,4 @@ function Introduction_Home() {
   );
 }
 
-export default Introduction_Home;
+export default IntroductionHome;

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../img/xingshen.png";
-import { Image, Menu, Select } from "antd";
-import _img from "../image/img";
+import { Menu, Select } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import history from "../../route/my-history";
 import "../../App.css";
@@ -26,7 +25,7 @@ function Header(props) {
       setCurrent(location.pathname);
     });
     return unHistory;
-  }, [history]);
+  }, []);
   return (
     <div>
       <div style={{ display: "flex", width: "100%", height: 100 }}>
@@ -40,6 +39,7 @@ function Header(props) {
             alignSelf: "center",
             marginLeft: 20,
           }}
+          alt={""}
         />
         <strong
           style={{

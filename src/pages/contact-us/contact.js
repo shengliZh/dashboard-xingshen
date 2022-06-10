@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import _img from "../image/img";
 import Company from "../about/company";
 import { Tabs } from "antd";
-import Contact_us from "../about/contact_us";
+import ContactUs from "../about/contactUs";
 import { getIntl } from "../../core/intl";
 
 const { TabPane } = Tabs;
@@ -43,7 +43,7 @@ function Contact() {
             }
             key="1"
           >
-            <Contact_us />
+            <ContactUs />
           </TabPane>
         </Tabs>
       </div>

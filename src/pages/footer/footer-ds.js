@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Space } from "antd";
+import { Space } from "antd";
 import { useNavigate } from "react-router-dom";
 import logo from "../../img/xingshen.png";
 import { getIntl } from "../../core/intl";
@@ -14,6 +14,7 @@ function FooterDs() {
         src={logo}
         className="img_shadow"
         style={{ height: 80, paddingTop: "10px", marginTop: 10 }}
+        alt={""}
       />
       <div style={{ marginLeft: 50 }}>
         <div style={{ display: "flex" }}>

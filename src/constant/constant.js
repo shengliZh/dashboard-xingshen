@@ -1,5 +1,4 @@
 import _img from "../pages/image/img";
-import React from "react";
 
 export const devices = [
   {

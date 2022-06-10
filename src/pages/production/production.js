@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Tabs } from "antd";
 import Company from "../about/company";
 import _img from "../image/img";
-import Production_Info from "./production_info";
+import ProductionInfo from "./productionInfo";
 import "./product.css";
 import { useLocation } from "react-router-dom";
 import { getIntl } from "../../core/intl";
@@ -108,7 +108,7 @@ function Production(props) {
               <div>
                 {_.chunk(p.img, 3).map((t, l) => {
                   return (
-                    <Production_Info
+                    <ProductionInfo
                       name={l === 0 ? tabKey : undefined}
                       img={t}
                       key={`${l}`}

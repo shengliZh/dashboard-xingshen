@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Image } from "antd";
-import { MoreOutlined } from "@ant-design/icons";
 import { getIntl } from "../../core/intl";
 
-function Production_Info(props) {
-  const [info, setInfo] = useState({});
+function ProductionInfo(props) {
   return (
     <div>
       {props.name && (
@@ -33,7 +31,6 @@ function Production_Info(props) {
           return (
             <div
               style={{
-                // textAlign: "center",
                 width: "26%",
                 margin: 20,
               }}
@@ -45,30 +42,6 @@ function Production_Info(props) {
                 style={{ height: 300, marginTop: 20, marginBottom: 20 }}
                 preview={false}
               />
-              {/*<div*/}
-              {/*  style={{*/}
-              {/*    fontSize: 16,*/}
-              {/*    fontWeight: "200",*/}
-              {/*  }}*/}
-              {/*>*/}
-              {/*  {getIntl("product_name")}*/}
-              {/*</div>*/}
-              {/*<div*/}
-              {/*  style={{*/}
-              {/*    display: "flex",*/}
-              {/*    marginBottom: 10,*/}
-              {/*  }}*/}
-              {/*>*/}
-              {/*  <div className="title" style={{ flex: "0.98" }} />*/}
-              {/*  <div*/}
-              {/*    className="more_style"*/}
-              {/*    onClick={() => {}}*/}
-              {/*    style={{ margin: 10 }}*/}
-              {/*  >*/}
-              {/*    <MoreOutlined className="more_icon" />*/}
-              {/*    MORE*/}
-              {/*  </div>*/}
-              {/*</div>*/}
             </div>
           );
         })}
@@ -77,4 +50,4 @@ function Production_Info(props) {
   );
 }
 
-export default Production_Info;
+export default ProductionInfo;

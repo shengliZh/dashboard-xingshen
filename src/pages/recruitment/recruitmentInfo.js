@@ -62,7 +62,7 @@ const content = [
     responsibility: "quality_inspector_job_requirements",
   },
 ];
-function Recruitment_info() {
+function RecruitmentInfo() {
   const [row, setRow] = useState(null);
   return (
     <div>
@@ -191,4 +191,4 @@ function Recruitment_info() {
   );
 }
 
-export default Recruitment_info;
+export default RecruitmentInfo;

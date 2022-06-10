@@ -36,7 +36,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-function Factory_env(props) {
+function FactoryEnv(props) {
   const settings = {
     dots: true,
     infinite: true,
@@ -69,4 +69,4 @@ function Factory_env(props) {
   );
 }
 
-export default Factory_env;
+export default FactoryEnv;

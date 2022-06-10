@@ -6,7 +6,6 @@ import Company from "../about/company";
 import _img from "../image/img";
 import "./factory.css";
 import { getIntl, getIntlHtml } from "../../core/intl";
-import { getHTML } from "react-intl-universal";
 
 const device1 = [devices[0], devices[1], devices[2]];
 const device2 = [devices[3], devices[4], devices[5]];

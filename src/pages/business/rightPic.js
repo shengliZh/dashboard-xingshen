@@ -3,7 +3,7 @@ import { Image } from "antd";
 import _img from "../image/img";
 import { getIntl } from "../../core/intl";
 
-function Right_pic(props) {
+function RightPic(props) {
   return (
     <div
       style={{
@@ -82,4 +82,4 @@ function Right_pic(props) {
   );
 }
 
-export default Right_pic;
+export default RightPic;

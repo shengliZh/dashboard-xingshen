@@ -108,7 +108,7 @@ const PCBA_zhijian = require("../../img/PCBA_zhijian.jpeg");
 const SMT_tiepian = require("../../img/SMT_tiepian.jpeg");
 const company_yy = require("../../img/company_yy.png");
 
-export default {
+const img = {
   yinshuaji,
   yinshuajicanshu,
   jianceshebei,
@@ -202,3 +202,5 @@ export default {
   chanpin_minyongzhineng_1,
   chanpin_minyongzhineng_2
 };
+
+export default img;

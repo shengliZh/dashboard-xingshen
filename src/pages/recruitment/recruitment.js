@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Company from "../about/company";
 import _img from "../image/img";
 import { Tabs } from "antd";
-import Recruitment_info from "./recruitment_info";
+import RecruitmentInfo from "./recruitmentInfo";
 import { getIntl } from "../../core/intl";
 
 const { TabPane } = Tabs;
@@ -42,7 +42,7 @@ function Recruitment() {
             }
             key="1"
           >
-            <Recruitment_info />
+            <RecruitmentInfo />
           </TabPane>
         </Tabs>
       </div>

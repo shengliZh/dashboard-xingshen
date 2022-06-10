@@ -3,7 +3,7 @@ import { Image } from "antd";
 import _img from "../image/img";
 import { getIntl } from "../../core/intl";
 
-function Left_pic(props) {
+function LeftPic(props) {
   return (
     <div style={{ display: "flex", marginTop: "10%" }}>
       <div style={{ flex: 0.15 }} />
@@ -78,4 +78,4 @@ function Left_pic(props) {
   );
 }
 
-export default Left_pic;
+export default LeftPic;

@@ -5,13 +5,11 @@ import Map, { MapApiLoaderHOC } from "react-bmapgl/Map";
 import ZoomControl from "react-bmapgl/Control/ZoomControl";
 import Marker from "react-bmapgl/Overlay/Marker";
 import InfoWindow from "react-bmapgl/Overlay/InfoWindow";
-import { useSelector } from "react-redux";
 import { getIntl } from "../../core/intl";
 
 const { Step } = Steps;
 
 function Contact() {
-  const locale = useSelector((state) => state.localeStore.currentLocale);
   const [showPop, setShowPop] = useState(true);
   return (
     <div

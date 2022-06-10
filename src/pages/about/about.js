@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Image, Menu, Tabs } from "antd";
+import { Tabs } from "antd";
 import "./about.css";
 import Introduction from "./introduction";
 import Company from "./company";
-import Contact from "./contact_us";
+import Contact from "./contactUs";
 import Honor from "./honor";
 import _img from "../image/img";
 import "../production/product.css";

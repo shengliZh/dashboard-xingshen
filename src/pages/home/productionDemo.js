@@ -4,39 +4,7 @@ import { Image } from "antd";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        backgroundColor: "#1a338f",
-        paddingTop: "2px",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        backgroundColor: "#1a338f",
-        paddingTop: "2px",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-function Production_demo(props) {
+function ProductionDemo(props) {
   const settings = {
     dots: true,
     infinite: true,
@@ -67,4 +35,4 @@ function Production_demo(props) {
   );
 }
 
-export default Production_demo;
+export default ProductionDemo;

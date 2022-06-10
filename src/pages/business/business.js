@@ -2,8 +2,8 @@ import React from "react";
 import Company from "../about/company";
 import _img from "../image/img";
 import "./business.css";
-import Right_pic from "./right_pic";
-import Left_pic from "./left_pic";
+import RightPic from "./rightPic";
+import LeftPic from "./leftPic";
 
 const business_all = [
   {
@@ -44,9 +44,9 @@ function Business() {
       <Company img={[_img.yewufanwei]} />
       {business_all.map((p, index) => {
         if (index % 2 === 0) {
-          return <Right_pic business={p} key={`${index}`} />;
+          return <RightPic business={p} key={`${index}`} />;
         }
-        return <Left_pic business={p} key={`${index}`} />;
+        return <LeftPic business={p} key={`${index}`} />;
       })}
     </div>
   );
