@@ -88,6 +88,13 @@ function App() {
                 color: "white",
               }}
             >
+              <a
+                style={{ marginRight: 50, color: "white" }}
+                href={"https://beian.miit.gov.cn/"}
+                target={"_blank"}
+              >
+                皖ICP备2022009016号-1
+              </a>
               {getIntl("copy_right")}：{getIntl("company_name")}
             </div>
           </Footer>
