@@ -92,6 +92,7 @@ function App() {
                 style={{ marginRight: 50, color: "white" }}
                 href={"https://beian.miit.gov.cn/"}
                 target={"_blank"}
+                rel={"noopener noreferrer"}
               >
                 皖ICP备2022009016号-1
               </a>
