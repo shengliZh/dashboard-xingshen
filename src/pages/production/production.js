@@ -28,7 +28,7 @@ const qiche_product = [
   { src: _img.product_8 },
   { src: _img.product_9 },
   { src: _img.product_10 },
-  { src: _img.product_11},
+  { src: _img.product_11 },
   { src: _img.product_12 },
   { src: _img.product_13 },
 ];
@@ -57,12 +57,14 @@ const wulianwang_product = [
   { src: _img.chanpin_9 },
 ];
 
+const medical_product = [];
+
 const category = [
   { name: "all_categories", img: all_category },
   { name: "vehicle_electronics", img: qiche_product },
   { name: "industrial_terminal", img: gongye_product },
   { name: "civil_intelligence", img: minyong_product },
-  { name: "smart_healthcare", img: qiche_product },
+  { name: "smart_healthcare", img: medical_product },
   { name: "internet_of_things", img: wulianwang_product },
 ];
 
@@ -113,15 +115,19 @@ function Production(props) {
               key={p.name}
             >
               <div>
-                {_.chunk(p.img, 3).map((t, l) => {
-                  return (
-                    <ProductionInfo
-                      name={l === 0 ? tabKey : undefined}
-                      img={t}
-                      key={`${l}`}
-                    />
-                  );
-                })}
+                {p.img.length > 0 ? (
+                  _.chunk(p.img, 3).map((t, l) => {
+                    return (
+                      <ProductionInfo
+                        name={l === 0 ? tabKey : undefined}
+                        img={t}
+                        key={`${l}`}
+                      />
+                    );
+                  })
+                ) : (
+                  <ProductionInfo name={tabKey} img={[]} />
+                )}
               </div>
             </TabPane>
           );
