@@ -72,11 +72,13 @@ const wulianwang_product = [
   { src: _img.chanpin_9 },
 ];
 
+const medical_product = [];
+
 const category = [
   { name: "vehicle_electronics", img: qiche_product },
   { name: "industrial_terminal", img: gongye_product },
   { name: "civil_intelligence", img: minyong_product },
-  { name: "smart_healthcare", img: qiche_product },
+  { name: "smart_healthcare", img: medical_product },
   { name: "internet_of_things", img: wulianwang_product },
 ];
 
