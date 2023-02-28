@@ -65,12 +65,19 @@ const yewu = require("../../img/yewu.jpeg");
 const yewufanwei = require("../../img/yewufanwei.jpeg");
 
 //产品->汽车电子
-const product_1 = require("../../img/product_1.jpg");
-const product_2 = require("../../img/product_2.jpg");
-const product_3 = require("../../img/product_3.jpg");
-const product_4 = require("../../img/product_4.jpg");
-const product_5 = require("../../img/product_5.jpg");
-const product_6 = require("../../img/product_6.jpg");
+const product_1 = require("../../img/product_qiche1.jpeg");
+const product_2 = require("../../img/product_qiche2.jpeg");
+const product_3 = require("../../img/product_qiche3.jpeg");
+const product_4 = require("../../img/product_qiche4.jpeg");
+const product_5 = require("../../img/product_qiche5.jpeg");
+const product_6 = require("../../img/product_qiche6.jpeg");
+const product_7 = require("../../img/product_qiche7.jpeg");
+const product_8 = require("../../img/product_qiche8.jpeg");
+const product_9 = require("../../img/product_qiche9.jpeg");
+const product_10 = require("../../img/product_qiche10.jpg");
+const product_11 = require("../../img/product_qiche11.jpg");
+const product_12 = require("../../img/product_qiche12.jpg");
+const product_13 = require("../../img/product_qiche13.jpg");
 
 //产品->工业终端
 const gongyezhongquan_1 = require("../../img/gongyezhongduan1.jpeg");
@@ -168,6 +175,13 @@ const img = {
   product_4,
   product_5,
   product_6,
+  product_7,
+  product_8,
+  product_9,
+  product_10,
+  product_11,
+  product_12,
+  product_13,
   zhengshu2,
   zhengshu1,
   lianxifangshi,

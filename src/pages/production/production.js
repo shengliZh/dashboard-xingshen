@@ -24,6 +24,13 @@ const qiche_product = [
   { src: _img.product_4 },
   { src: _img.product_5 },
   { src: _img.product_6 },
+  { src: _img.product_7 },
+  { src: _img.product_8 },
+  { src: _img.product_9 },
+  { src: _img.product_10 },
+  { src: _img.product_11},
+  { src: _img.product_12 },
+  { src: _img.product_13 },
 ];
 
 const gongye_product = [
